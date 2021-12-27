@@ -968,6 +968,9 @@ ol {
 .single-banner img {
 	min-width: 100%;
 }
+.card-table .img-sc{
+	max-width: 30%;
+}
 
 .single-banner .inner-text {
 	position: absolute;
