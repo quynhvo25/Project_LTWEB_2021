@@ -117,8 +117,8 @@
                                         <h5>350.000 vnđ</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="#" class="primary-btn view-card">Xem giỏ hàng</a>
-                                        <a href="#" class="primary-btn checkout-btn">Thanh toán</a>
+                                        <a href="shopping-cart.html" class="primary-btn view-card">Xem giỏ hàng</a>
+                                        <a href="check-out.html" class="primary-btn checkout-btn">Thanh toán</a>
                                     </div>
                                 </div>
                             </li>
@@ -153,6 +153,7 @@
     </header>
     <!-- Header End -->
 
+
     <!-- Breadcrumb Section Begin -->
     <div class="breacrumb-section">
         <div class="container">
@@ -180,21 +181,16 @@
                         </div>
                         <h4>Chi tiết đơn hàng</h4>
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <label for="fir">Họ tên<span>*</span></label>
                                 <input type="text" id="fir">
                             </div>
                             <div class="col-lg-12">
                                 <label for="street">Địa chỉ<span>*</span></label>
                                 <input type="text" id="street" class="street-first">
-                                <input type="text">
-                            </div>
-                            <div class="col-lg-12">
-                                <label for="town">Town / City<span>*</span></label>
-                                <input type="text" id="town">
                             </div>
                             <div class="col-lg-6">
-                                <label for="email">Email Address<span>*</span></label>
+                                <label for="email">Email <span>*</span></label>
                                 <input type="text" id="email">
                             </div>
                             <div class="col-lg-6">
@@ -204,7 +200,7 @@
                             <div class="col-lg-12">
                                 <div class="create-item">
                                     <label for="acc-create">
-                                        Create an account?
+                                        Tạo tài khoản?
                                         <input type="checkbox" id="acc-create">
                                         <span class="checkmark"></span>
                                     </label>
@@ -214,37 +210,20 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="checkout-content">
-                            <input type="text" placeholder="Enter Your Coupon Code">
+                            <input type="text" placeholder="Nhập mã giảm giá">
                         </div>
                         <div class="place-order">
-                            <h4>Your Order</h4>
+                            <h4>Đơn hàng của bạn</h4>
                             <div class="order-total">
                                 <ul class="order-table">
-                                    <li>Product <span>Total</span></li>
-                                    <li class="fw-normal">Combination x 1 <span>$60.00</span></li>
-                                    <li class="fw-normal">Combination x 1 <span>$60.00</span></li>
-                                    <li class="fw-normal">Combination x 1 <span>$120.00</span></li>
-                                    <li class="fw-normal">Subtotal <span>$240.00</span></li>
-                                    <li class="total-price">Total <span>$240.00</span></li>
+                                    <li>Sản phẩm <span>Tổng cộng</span></li>
+                                    <li class="fw-normal">Phí vận chuyển <span>15.000</span></li>
+                                    <li class="fw-normal">Mã giảm giá <span>0</span></li>
+                                    <li class="fw-normal">Tổng tiền hàng <span>560.000</span></li>
+                                    <li class="total-price">Tổng thanh toán <span>575.000</span></li>
                                 </ul>
-                                <div class="payment-check">
-                                    <div class="pc-item">
-                                        <label for="pc-check">
-                                            Cheque Payment
-                                            <input type="checkbox" id="pc-check">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="pc-item">
-                                        <label for="pc-paypal">
-                                            Paypal
-                                            <input type="checkbox" id="pc-paypal">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
                                 <div class="order-btn">
-                                    <button type="submit" class="site-btn place-btn">Place Order</button>
+                                    <button type="submit" class="site-btn place-btn">Đặt hàng</button>
                                 </div>
                             </div>
                         </div>
