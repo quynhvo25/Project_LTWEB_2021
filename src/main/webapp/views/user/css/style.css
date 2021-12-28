@@ -3857,6 +3857,18 @@ ol {
 	font-size: 14px;
 	color: #6B6B6B;
 }
+/*phân trang*/
+.pagination-product {
+	padding-left: 45%;
+	padding-right: 25%;
+	margin: 10px;
+}
+.pagination-product a:active{
+	background-color: #db9f4c;
+	border-radius: 0%;
+	padding: 7px;
+	color: white;
+}
 
 /* ------------------------------ Responsive Media Styles ---------------------------- */
 
@@ -4280,16 +4292,5 @@ ol {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	/*phân trang*/
-	.pagination-product {
-		padding-left: 45%;
-		padding-right: 25%;
-		margin: 10px;
-	}
-	.pagination-product a:active{
-		background-color: #db9f4c;
-		border-radius: 0%;
-		padding: 7px;
-		color: white;
-	}
+
 }
