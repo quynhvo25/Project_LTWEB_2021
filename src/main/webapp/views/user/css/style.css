@@ -396,6 +396,7 @@ ol {
 .inner-header .advanced-search {
 	height: 50px;
 	border: 1px solid #ebebeb;
+	margin-top: 22px;
 }
 
 .inner-header .advanced-search .category-btn {
@@ -1471,7 +1472,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-	background: #191919;
+	background: #000000;
 	padding-top: 75px;
 }
 
@@ -3874,7 +3875,8 @@ ol {
 
 @media only screen and (min-width: 1200px) and (max-width: 1920px) {
 	.inner-header .advanced-search .input-group button {
-		right: -14px;
+		right: 15px;
+		top: 21px;
 	}
 	.product-item .pi-pic ul li a {
 		padding: 16px 12px 12px 11px;
