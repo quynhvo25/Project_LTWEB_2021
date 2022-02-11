@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div class="ht-right">
-                    <a href="login.html" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
-                    <a href="register.html" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
+                    <a href="login.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
+                    <a href="register.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
                     <div class="top-social">
                         <a href="#"><i class="ti-facebook"></i></a>
                         <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="index.jsp">
                                 <img src="img/logoweb.png" alt="">
                             </a>
                         </div>
@@ -117,8 +117,8 @@
                                         <h5>350.000 vnđ</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="shopping-cart.html" class="primary-btn view-card">Xem giỏ hàng</a>
-                                        <a href="check-out.html" class="primary-btn checkout-btn">Thanh toán</a>
+                                        <a href="shopping-cart.jsp" class="primary-btn view-card">Xem giỏ hàng</a>
+                                        <a href="check-out.jsp" class="primary-btn checkout-btn">Thanh toán</a>
                                     </div>
                                 </div>
                             </li>
@@ -135,15 +135,15 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
-                        <li><a href="list-product.html">SHOP</a>
+                        <li class="active"><a href="index.jsp">TRANG CHỦ</a></li>
+                        <li><a href="list-product.jsp">SHOP</a>
                             <ul class="dropdown">
-                                <li><a href="list-product-top.html">TOP</a></li>
-                                <li><a href="list-product-bottom.html">BOTTOM</a></li>
-                                <li><a href="list-product-accessories.html">ACCESSORIES</a></li>
+                                <li><a href="list-product-top.jsp">TOP</a></li>
+                                <li><a href="list-product-bottom.jsp">BOTTOM</a></li>
+                                <li><a href="list-product-accessories.jsp">ACCESSORIES</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="about.jsp">ABOUT</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
                 </nav>

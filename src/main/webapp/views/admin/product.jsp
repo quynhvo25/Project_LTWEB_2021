@@ -42,31 +42,31 @@
                         <nav class="navbar-sidebar2">
                             <ul class="list-unstyled navbar__list">
                                 <li>
-                                    <a class="js-arrow" href="index.html">Thống kê</a>
+                                    <a class="js-arrow" href="index.jsp">Thống kê</a>
                                 </li>
                                 <li >
-                                    <a href="category.html">
+                                    <a href="category.jsp">
                                         Quản lí danh mục sản phẩm</a>
                                 
                                 </li>
 
                                 <li class="active">
-                                    <a href="product.html">
+                                    <a href="product.jsp">
                                         Quản lí sản phẩm</a>
                                 
                                 </li>
 
                                 <li>
-                                    <a href="order.html">
+                                    <a href="order.jsp">
                                     Quản lí đơn hàng</a>
                                 </li>
                                 
                                 <li>
-                                    <a href="customer.html">
+                                    <a href="customer.jsp">
                                     Quản lí khách hàng</a>
                                 </li>
                                 <li>
-                                    <a href="user.html">
+                                    <a href="user.jsp">
                                     Quản lí tài khoản</a>
                                 </li>
                             </ul>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
 
-    <title>Đơn hàng</title>
+    <title>Khách hàng</title>
 
      <!-- Fontfaces CSS-->
    <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -37,31 +37,31 @@
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
                             <li>
-                                <a class="js-arrow" href="index.html">Thống kê</a>
+                                <a class="js-arrow" href="index.jsp">Thống kê</a>
                             </li>
                             <li >
-                                <a href="category.html">
+                                <a href="category.jsp">
                                     Quản lí danh mục sản phẩm</a>
                             
                             </li>
 
                             <li>
-                                <a href="product.html">
+                                <a href="product.jsp">
                                     Quản lí sản phẩm</a>
                             
                             </li>
 
-                            <li class="active">
-                                <a href="order.html">
+                            <li>
+                                <a href="order.jsp">
                                 Quản lí đơn hàng</a>
                             </li>
                             
-                            <li>
-                                <a href="customer.html">
+                            <li  class="active">
+                                <a href="customer.jsp">
                                 Quản lí khách hàng</a>
                             </li>
                             <li>
-                                <a href="user.html">
+                                <a href="user.jsp">
                                 Quản lí tài khoản</a>
                             </li>
                         </ul>
@@ -205,7 +205,10 @@
                 <!--TABLE-->
                 <div class="container-table">
                     <div class="header-table">
-                        <label class="title-table">Đơn hàng</label>
+                        <label class="title-table">Khách hàng</label>
+                        <button class="btn-add js-btn-add">
+                            <i class="fas fa-plus"></i> Thêm
+                        </button>
                     </div>
 
                     <!--SEARCH-->
@@ -217,25 +220,37 @@
                     <!--Table-->
                     <table class="table-category">
                         <tr class="row-1">
-                            <th>Mã đơn hàng</th>
                             <th>Mã khách hàng</th>
-                            <th>Tên khách hàng</th>
-                            <th>Số điẹn thoại</th>
+                            <th>Họ tên</th>
+                            <th>Mật khẩu</th>
+                            <th>Email</th>
+                            <th>Số điện thoại</th>
                             <th>Địa chỉ</th>
-                            <th>Ghi chú</th>
-                            <th>Trạng thái</th>
-                            
+                            <th>Ảnh</th>
+                            <td>Xác thực</td>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
 
                         </tr>
                         <tr class="row-2">
-                            <td>DH01</td>
                             <td>quynh</td>
                             <td>Thanh Quỳnh</td>
+                            <td>12345</td>
+                            <td>quynhvo25@gmail.com</td>
                             <td>0909090909</td>
                             <td>Gia Lai</td>
-                            <td>giao giờ hàng chính</td>
-                            <td><span class="status">Chờ xác nhận</span></td>
-                            
+                            <td></td>
+                            <td>Yes</td>
+                            <td>
+                                <button class="btn-edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn-remove">
+                                    <i class="fas fa-trash-alt"></i> 
+                                </button>
+                            </td>
                             
                         </tr>
 
@@ -264,6 +279,119 @@
 
     </div>
 
+    <!--Modal ADD-->
+    <div class="modal-add js-modal">
+                <div class="modal-container">
+                    <div class="modal-close js-modal-close">
+                        <i class="fas fa-close"></i>
+                    </div>
+        
+                    <div class="header-modal-add">
+                       <span class="header-title">
+                           <i class="hd-icon-modal fas fa-plus"></i>Thêm khách hàng</span>
+                    </div>
+        
+                    <div class="modal-body">
+                        <table class="modal-table">
+                            <tr class="row-modal-1">
+                                <th class="modal-th">
+                                    <label for="id-customer" class="modal-label">
+                                        Mã khách hàng
+                                    </label>
+                                </th>
+                                <th class="modal-th">
+                                    <label for="password-customer" class="modal-label">
+                                        Mật khẩu
+                                    </label>
+                                </th>
+
+                            </tr>
+
+                            <tr class="row-modal-2">
+                                <td class="modal-td"> 
+                                    <input id="id-customer" type="text" class="modal-input">
+                                </td>
+                                <td class="modal-td">
+                                    <input id="password-customer" type="text" class="modal-input">
+                                </td>    
+                            </tr>
+
+                            <tr class="row-modal-1">
+                                <th class="modal-th">
+                                    <label for="name-customer" class="modal-label">
+                                        Tên khách hàng
+                                    </label>
+                                </th>
+                                <th class="modal-th">
+                                    <label for="email-customer" class="modal-label">
+                                        Email
+                                    </label>
+                                </th>
+
+                            </tr>
+
+                            <tr class="row-modal-2">
+                                <td class="modal-td"> 
+                                    <input id="name-customer" type="text" class="modal-input">
+                                </td>
+                                <td class="modal-td">
+                                    <input id="email-customer" type="text" class="modal-input">
+                                </td>    
+                            </tr>
+
+                            <tr class="row-modal-1">
+                                <th class="modal-th">
+                                    <label for="phone-customer" class="modal-label">
+                                        Số điện thoại
+                                    </label>
+                                </th>
+                                <th class="modal-th">
+                                    <label for="address-customer" class="modal-label">
+                                        Địa chỉ
+                                    </label>
+                                </th>
+
+                            </tr>
+
+                            <tr class="row-modal-2">
+                                <td class="modal-td"> 
+                                    <input id="phone-customer" type="text" class="modal-input">
+                                </td>
+                                <td class="modal-td">
+                                    <input id="address-customer" type="text" class="modal-input">
+                                </td>    
+                            </tr>
+
+                        </table>
+
+                        <div class="active-radio">
+                            <label>Xác thực:</label>
+                            <div class="radio">
+                                <input id="radio-1" class="radio-input" type="radio" name="radio" checked>
+                                <label for="radio-1" class="radio-label">Đã xác thực</label>
+                            </div>
+                            <div class="radio">
+                                <input id="radio-2" class="radio-input" type="radio" name="radio">
+                                <label for="radio-2" class="radio-label">Chưa xác thực</label>
+
+                            </div>
+                        </div>
+                        
+        
+                        </div>
+        
+        
+        
+                        <button id="modal-btn-add">
+                            <i class="hd-icon-modal fas fa-plus"></i>Thêm 
+                        </button>
+                    </div>
+        
+                </div>
+     </div>
+    <!--End Modal ADD-->
+        
+
     <!--FOOTER-->
     <div class="footer">
         <span class="title-footer">
@@ -274,7 +402,22 @@
 
    <!-- Main JS-->
    <script src="js/main.js"></script>
-    
+
+   <script>
+    const addCategoryBtn = document.querySelector('.js-btn-add')
+    const modal = document.querySelector('.js-modal')
+    const modalClose = document.querySelector('.js-modal-close')
+
+     function showFormAddCategory(){
+       modal.classList.add('open')
+      
+   }  
+   function hideFormCategory(){
+       modal.classList.remove('open')
+   }
+       addCategoryBtn.addEventListener('click',showFormAddCategory)
+       modalClose.addEventListener('click',hideFormCategory)
+</script>
 
 </body>
 

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accessories</title>
+    <title>Catagories</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -45,8 +45,8 @@
                 </div>
             </div>
             <div class="ht-right">
-                <a href="login.html" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
-                <a href="register.html" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
+                <a href="login.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
+                <a href="#" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
                 <div class="top-social">
                     <a href="#"><i class="ti-facebook"></i></a>
                     <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
-                        <a href="./index.html">
+                        <a href="index.jsp">
                             <img src="img/logo.png" alt="">
                         </a>
                     </div>
@@ -117,8 +117,8 @@
                                     <h5>350.000 vnđ</h5>
                                 </div>
                                 <div class="select-button">
-                                    <a href="shopping-cart.html" class="primary-btn view-card">Xem giỏ hàng</a>
-                                    <a href="check-out.html" class="primary-btn checkout-btn">Thanh toán</a>
+                                    <a href="shopping-cart.jsp" class="primary-btn view-card">Xem giỏ hàng</a>
+                                    <a href="check-out.jsp" class="primary-btn checkout-btn">Thanh toán</a>
                                 </div>
                             </div>
                         </li>
@@ -135,16 +135,16 @@
             </div>
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
-                    <li><a href="list-product.html">SHOP</a>
+                    <li class="active"><a href="index.jsp">TRANG CHỦ</a></li>
+                    <li><a href="list-product.jsp">SHOP</a>
                         <ul class="dropdown">
-                            <li><a href="list-product-top.html">TOP</a></li>
-                            <li><a href="list-product-bottom.html">BOTTOM</a></li>
-                            <li><a href="list-product-accessories.html">ACCESSORIES</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">ACCESSORIES</a></li>
                         </ul>
                     </li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="./blog.html">ABOUT</a></li>
+                    <li><a href="contact.jsp">CONTACT</a></li>
                 </ul>
             </nav>
             <div id="mobile-menu-wrap"></div>
@@ -196,10 +196,10 @@
             <div class="col-lg-9 order-1 order-lg-2">
                 <div class="product-show-option">
                     <div class="row">
-                        <p>ACCESSORIES</p>
+                        <p>CATAGORIES</p>
                     </div>
                 </div>
-                <div class="product-accessories-list">
+                <div class="product-top-list">
                     <div class="row">
                         <div class="col-lg-4 col-sm-6">
                             <div class="product-item">
@@ -214,7 +214,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi xách đeo chéo</h5>
                                     </a>
@@ -238,7 +238,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi vải vote đựng giấy A4</h5>
                                     </a>
@@ -262,7 +262,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi vải Canvas</h5>
                                     </a>
@@ -286,7 +286,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi đeo chéo đi học</h5>
                                     </a>
@@ -310,7 +310,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi đeo chéo Fashion</h5>
                                     </a>
@@ -334,7 +334,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi đeo chéo hình tròn</h5>
                                     </a>
@@ -358,7 +358,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi đeo chéo Canvas</h5>
                                     </a>
@@ -382,7 +382,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo thời trang Hàn Quốc</h5>
                                     </a>
@@ -406,7 +406,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo đi học thời trang</h5>
                                     </a>
@@ -430,7 +430,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo đi học</h5>
                                     </a>
@@ -454,7 +454,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo đa thời trang 3 ngăn</h5>
                                     </a>
@@ -478,7 +478,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo dạng chữ nhật IDIGO FB2</h5>
                                     </a>
@@ -502,7 +502,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo combo 4 món</h5>
                                     </a>
@@ -526,7 +526,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo chống trộm</h5>
                                     </a>
@@ -550,7 +550,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo cao cấp ChangYe</h5>
                                     </a>
@@ -574,7 +574,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo mini họa tiết trái tim</h5>
                                     </a>
@@ -598,7 +598,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Balo nam nữ chống nước</h5>
                                     </a>
@@ -622,7 +622,7 @@
                                     </ul>
                                 </div>
                                 <div class="pi-text">
-                                    <div class="catagory-name">Accessories</div>
+                                    <div class="catagory-name">Catagories</div>
                                     <a href="#">
                                         <h5>Túi đeo chéo hàng quảng châu</h5>
                                     </a>

@@ -7,7 +7,7 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>THANH TOÁN</title>
+    <title>Đăng nhập</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div class="ht-right">
-                    <a href="login.html" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
-                    <a href="register.html" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
+                    <a href="login.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
+                    <a href="register.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
                     <div class="top-social">
                         <a href="#"><i class="ti-facebook"></i></a>
                         <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
-                            <a href="./index.html">
+                            <a href="index.jsp">
                                 <img src="img/logoweb.png" alt="">
                             </a>
                         </div>
@@ -117,8 +117,8 @@
                                         <h5>350.000 vnđ</h5>
                                     </div>
                                     <div class="select-button">
-                                        <a href="shopping-cart.html" class="primary-btn view-card">Xem giỏ hàng</a>
-                                        <a href="check-out.html" class="primary-btn checkout-btn">Thanh toán</a>
+                                        <a href="shopping-cart.jsp" class="primary-btn view-card">Xem giỏ hàng</a>
+                                        <a href="check-out.jsp" class="primary-btn checkout-btn">Thanh toán</a>
                                     </div>
                                 </div>
                             </li>
@@ -135,21 +135,21 @@
                 </div>
                 <nav class="nav-menu mobile-menu">
                     <ul>
-                        <li class="active"><a href="./index.html">TRANG CHỦ</a></li>
-                        <li><a href="list-product.html">SHOP</a>
+                        <li class="active"><a href="index.jsp">TRANG CHỦ</a></li>
+                        <li><a href="list-product.jsp">SHOP</a>
                             <ul class="dropdown">
-                                <li><a href="list-product-top.html">TOP</a></li>
-                                <li><a href="list-product-bottom.html">BOTTOM</a></li>
-                                <li><a href="list-product-accessories.html">ACCESSORIES</a></li>
+                                <li><a href="list-product-top.jsp">TOP</a></li>
+                                <li><a href="list-product-bottom.jsp">BOTTOM</a></li>
+                                <li><a href="list-product-accessories.jsp">ACCESSORIES</a></li>
                             </ul>
                         </li>
-                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="about.jsp">ABOUT</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
                 </nav>
                 <div id="mobile-menu-wrap"></div>
             </div>
-        </div>
+        </div>>
     </header>
     <!-- Header End -->
 
@@ -159,80 +159,54 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="breadcrumb-text product-more">
-                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./shop.html">Shop</a>
-                        <span>Thanh toán</span>
+                    <div class="breadcrumb-text">
+                        <a href="#"><i class="fa fa-home"></i> Home</a>
+                        <span>Đăng nhập</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb Section Begin -->
+    <!-- Breadcrumb Form Section Begin -->
 
-    <!-- Shopping Cart Section Begin -->
-    <section class="checkout-section spad">
+    <!-- Register Section Begin -->
+    <div class="register-login-section spad">
         <div class="container">
-            <form action="#" class="checkout-form">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="checkout-content">
-                            <a href="login.html" class="content-btn">Nhấp vào đây để ĐĂNG NHẬP</a>
-                        </div>
-                        <h4>Chi tiết đơn hàng</h4>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <label for="fir">Họ tên<span>*</span></label>
-                                <input type="text" id="fir">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="login-form">
+                        <h2>Đăng nhập</h2>
+                        <form action="#">
+                            <div class="group-input">
+                                <label for="username">Tên tài khoản hoặc email *</label>
+                                <input type="text" id="username">
                             </div>
-                            <div class="col-lg-12">
-                                <label for="street">Địa chỉ<span>*</span></label>
-                                <input type="text" id="street" class="street-first">
+                            <div class="group-input">
+                                <label for="pass">Mật khẩu *</label>
+                                <input type="text" id="pass">
                             </div>
-                            <div class="col-lg-6">
-                                <label for="email">Email <span>*</span></label>
-                                <input type="text" id="email">
-                            </div>
-                            <div class="col-lg-6">
-                                <label for="phone">Phone<span>*</span></label>
-                                <input type="text" id="phone">
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="create-item">
-                                    <label for="acc-create">
-                                        Tạo tài khoản?
-                                        <input type="checkbox" id="acc-create">
+                            <div class="group-input gi-check">
+                                <div class="gi-more">
+                                    <label for="save-pass">
+                                        Lưu mật khẩu
+                                        <input type="checkbox" id="save-pass">
                                         <span class="checkmark"></span>
                                     </label>
+                                    <a href="#" class="forget-pass">Quên mật khẩu?</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="checkout-content">
-                            <input type="text" placeholder="Nhập mã giảm giá">
-                        </div>
-                        <div class="place-order">
-                            <h4>Đơn hàng của bạn</h4>
-                            <div class="order-total">
-                                <ul class="order-table">
-                                    <li>Sản phẩm <span>Tổng cộng</span></li>
-                                    <li class="fw-normal">Phí vận chuyển <span>15.000</span></li>
-                                    <li class="fw-normal">Mã giảm giá <span>0</span></li>
-                                    <li class="fw-normal">Tổng tiền hàng <span>560.000</span></li>
-                                    <li class="total-price">Tổng thanh toán <span>575.000</span></li>
-                                </ul>
-                                <div class="order-btn">
-                                    <button type="submit" class="site-btn place-btn">Đặt hàng</button>
-                                </div>
-                            </div>
+                            <button type="submit" class="site-btn login-btn">ĐĂNG NHẬP</button>
+                        </form>
+                        <div class="switch-login">
+                            <a href="register.jsp" class="or-login">hoặc TẠO TÀI KHOẢN</a>
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </section>
-    <!-- Shopping Cart Section End -->
+    </div>
+    <!-- Register Form Section End -->
+
 
     <!-- Footer Section Begin -->
     <footer class="footer-section">
