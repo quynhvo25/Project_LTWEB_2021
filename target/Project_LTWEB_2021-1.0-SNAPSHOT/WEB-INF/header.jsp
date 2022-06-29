@@ -1,14 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/bootstrap.min.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/themify-icons.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/elegant-icons.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/owl.carousel.min.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/nice-select.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/jquery-ui.min.css" type="text/css">
-<link rel="stylesheet" href=${pageContext.request.contextPath}/views/user/css/slicknav.min.css" type="text/css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/style.css" type="text/css">
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/views/user/img/favicon.ico"/>
+00
 <header class="header-section">
     <div class="header-top">
         <div class="container">
