@@ -3,45 +3,38 @@ package vn.edu.hcmuaf.fit.fit.beans;
 import java.io.Serializable;
 
 public class Product implements Serializable {
+
+    /**
+     *
+     */
     private static final long serialVersionUID = 1L;
-    private String id;
+    private String masp;
     private String name;
+    private String category;
+    private float price;
+    private String imagelink;
     private String description;
-    private int price;
-    private int sellPrice;
-    private int quatity;
-    private String img;
 
-    public Product(){
-    }
-
-    public Product(String id, String name, String description, int price, int sellPrice, int quatity, String img) {
-        this.id = id;
+    public Product(String masp, String name, String category, float price, String imagelink, String description) {
+        super();
+        this.masp = masp;
         this.name = name;
-        this.description = description;
+        this.category = category;
         this.price = price;
-        this.sellPrice = sellPrice;
-        this.quatity = quatity;
-        this.img = img;
+        this.imagelink = imagelink;
+        this.description = description;
     }
-    @Override
-    public String toString() {
-        return id + ',' +
-                name+','+
-                description+','+
-                price+','+
-                sellPrice+','+
-                quatity+','+
-                img+',';
+
+    public Product() {
 
     }
 
-    public String getId() {
-        return id;
+    public String getMasp() {
+        return masp;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMasp(String masp) {
+        this.masp = masp;
     }
 
     public String getName() {
@@ -52,6 +45,30 @@ public class Product implements Serializable {
         this.name = name;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public String getImagelink() {
+        return imagelink;
+    }
+
+    public void setImagelink(String imagelink) {
+        this.imagelink = imagelink;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -60,37 +77,8 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public int getPrice() {
-        return price;
+    public static long getSerialversionuid() {
+        return serialVersionUID;
     }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getSellPrice() {
-        return sellPrice;
-    }
-
-    public void setSellPrice(int sellPrice) {
-        this.sellPrice = sellPrice;
-    }
-
-    public int getQuatity() {
-        return quatity;
-    }
-
-    public void setQuatity(int quatity) {
-        this.quatity = quatity;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
 
 }

@@ -1,33 +1,64 @@
 package vn.edu.hcmuaf.fit.fit.controller;
 
-import vn.edu.hcmuaf.fit.fit.service.UserServices;
+import java.io.IOException;
+import java.sql.SQLException;
 
-
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import javax.servlet.http.HttpSession;
+
+import vn.edu.hcmuaf.fit.fit.service.LoginService;
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       String username = request.getParameter("username");
-       String password = request.getParameter("password");
+    /**
+     *
+     */
+    private LoginService loginService = new LoginService();
+    private static final long serialVersionUID = 1L;
 
-       if(UserServices.getInstance().checkLogin(username,password)){
-           response.sendRedirect("http://localhost:8080/Project_LTWEB_2021/Home");
-       } else {
-           request.setAttribute("error","Username or password is incorrect");
-           request.getRequestDispatcher("/views/user/login.jsp").forward(request,response);
-       }
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       doPost(request,response);
+        try {
+
+            String username = req.getParameter("username");
+            String pass = req.getParameter("password");
+
+            if (username.equals("admin") && pass.equals("admin")) {
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/admin/index.jsp");
+                dispatcher.forward(req, resp);
+
+            } else {
+                boolean isvalid;
+
+                isvalid = loginService.checkLogin(username, pass);
+
+                if (isvalid) {
+                    HttpSession session = req.getSession();
+                    session.setAttribute("dangnhapthanhcong", username);
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
+                    dispatcher.forward(req, resp);
+                } else {
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/user/login.jsp");
+                    dispatcher.forward(req, resp);
+                }
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
+
 }

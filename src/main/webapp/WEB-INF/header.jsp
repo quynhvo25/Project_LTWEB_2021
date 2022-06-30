@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-00
+
 <header class="header-section">
     <div class="header-top">
         <div class="container">

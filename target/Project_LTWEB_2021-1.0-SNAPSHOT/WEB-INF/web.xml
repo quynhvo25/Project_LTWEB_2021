@@ -7,11 +7,6 @@
         <welcome-file>Home</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
-    <servlet-mapping>
-        <servlet-name>Home</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
-
+    
 
 </web-app>
