@@ -10,28 +10,28 @@ import vn.edu.hcmuaf.fit.beans.UserAccount;
 
 public class UserAccountDAO {
 
-    public Connection getConnection() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/ltwebbasic?useSSL=false";
-            String user = "root";
-            String password = "";
-            return DriverManager.getConnection(url, user, password);
-        } catch (ClassNotFoundException | SQLException e) {
-            return null;
+//    public Connection getConnection() {
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            String url = "jdbc:mysql://localhost:3306/ltwebbasic?useSSL=false";
+//            String user = "root";
+//            String password = "";
+//            return DriverManager.getConnection(url, user, password);
+//        } catch (ClassNotFoundException | SQLException e) {
+//            return null;
+//
+//        }
+//
+//    }
 
-        }
-
-    }
-
-    public int registerUserAccount(UserAccount userAccount) throws ClassNotFoundException {
+    public int registerUserAccount( Connection connection,UserAccount userAccount) throws ClassNotFoundException {
         String INSERT_USERS_SQL = "INSERT INTO useraccount"
                 + "  (username, fullname, password, repassword, address, numberphone) VALUES "
                 + " (?, ?, ?, ?,?,?);";
 
         int result = 0;
 
-        Connection connection = getConnection();
+//        Connection connection = getConnection();
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);

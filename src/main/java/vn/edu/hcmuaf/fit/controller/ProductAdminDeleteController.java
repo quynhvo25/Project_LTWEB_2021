@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vn.edu.hcmuaf.fit.db.DBConnect;
 import vn.edu.hcmuaf.fit.service.ProductService;
 
 @WebServlet(urlPatterns = { "/deleteProduct" })
@@ -32,7 +34,8 @@ public class ProductAdminDeleteController extends HttpServlet {
         String errorString = null;
 
         try {
-            productService.deleteProduct(masp);
+            Connection connection = DBConnect.getConnection();
+            productService.deleteProduct(connection,masp);
         } catch (SQLException e) {
             e.printStackTrace();
             errorString = e.getMessage();

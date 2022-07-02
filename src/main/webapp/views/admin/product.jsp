@@ -396,9 +396,6 @@
 
 
 
-<!--
-
-
 
 <%--  Main JS   -->--%>
 <script src="${pageContext.request.contextPath}/views/admin/js/main.js"></script>
@@ -422,26 +419,6 @@
 
 
 
-
-<!--áº¨n hiá»n formTHÊM danh má»¥c sáº£n pháº©m admin-->
-<script>
-    const updateCategoryBtn = document.querySelector('.js-btn-update')
-    const modal = document.querySelector('.js-modal2')
-    const modalClose = document.querySelector('.js-modal-close2')
-
-    function showFormAddCategory(){
-        modal.classList.add('open')
-
-    }
-    function hideFormCategory(){
-        modal.classList.remove('open')
-    }
-    updateCategoryBtn .addEventListener('click',showFormAddCategory)
-    modalClose.addEventListener('click',hideFormCategory)
-</script>
-
 </body>
-
-
 
 </html>

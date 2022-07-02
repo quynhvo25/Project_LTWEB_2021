@@ -1,12 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 <%
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
 %>
-<c:set var="root" value="${pageContext.request.contextPath}" />
+<%
+    String error = (String) request.getAttribute("error");
 
+%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -23,16 +24,16 @@
 
     <!-- Css Styles -->
 
-    <link rel="stylesheet" href="${root}/views/user/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href=${root}/views/user/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="${root}/views/user/css/style.css" type="text/css">
-    <link rel="shortcut icon" href="${root}/views/user/img/favicon.ico"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/style.css" type="text/css">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/views/user/img/favicon.ico"/>
 </head>
 
 <body>
@@ -93,35 +94,61 @@
                     </div>
                     <div class="product-list">
                         <div class="row">
-                            <jsp:useBean id="products" scope="request" type="java.util.List"/>
-                            <c:forEach var="p" items="${products}">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="product-item">
-                                    <div class="pi-pic">
-                                        <img src="${p.img}" alt="">
-                                        <div class="icon">
-                                            <i class="icon_heart_alt"></i>
-                                        </div>
-                                        <ul>
-                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                            <li class="quick-view"><a href="#">+ Thêm vào giỏ hàng</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="pi-text">
-                                        <div class="catagory-name">Top</div>
-                                        <a href="#">
-                                            <h5>${p.name}</h5>
-                                        </a>
-                                        <div class="product-price">
-                                            ${p.sellPrice}
-                                            <span>${p.price}</span>
-                                        </div>
-                                    </div>
-                                </div>
+<%--
+<%--                            <c:forEach var="p" items="${products}">--%>
+<%--                            <div class="col-lg-4 col-sm-6">--%>
+<%--                                <div class="product-item">--%>
+<%--                                    <div class="pi-pic">--%>
+<%--                                        <img src="${p.img}" alt="">--%>
+<%--                                        <div class="icon">--%>
+<%--                                            <i class="icon_heart_alt"></i>--%>
+<%--                                        </div>--%>
+<%--                                        <ul>--%>
+<%--                                            <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>--%>
+<%--                                            <li class="quick-view"><a href="#">+ Thêm vào giỏ hàng</a></li>--%>
+<%--                                        </ul>--%>
+<%--                                    </div>--%>
+<%--                                    <div class="pi-text">--%>
+<%--                                        <div class="catagory-name">Top</div>--%>
+<%--                                        <a href="#">--%>
+<%--                                            <h5>${p.name}</h5>--%>
+<%--                                        </a>--%>
+<%--                                        <div class="product-price">--%>
+<%--                                            ${p.sellPrice}--%>
+<%--                                            <span>${p.price}</span>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                            </c:forEach>--%>
+
+
+
+                <c:forEach items="${productList}" var="product" >
+                    <div class="col-lg-4 col-sm-6">
+                          <div class="product-item">
+                              <div class="pi-pic">
+                                  <img src="${pageContext.request.contextPath}${product.imagelink}" alt="">
+                                 <div class="icon">
+                                    <i class="icon_heart_alt"></i>
+                              </div>
+                               <ul>
+                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                       <li class="quick-view"><a href="#">+ Thêm vào giỏ hàng</a></li>
+                                </ul>
+                           <div class="pi-text">
+                                 <a href="#">
+                                       <h5>${product.name}</h5>
+                                   </a>
+                                 <div class="product-price">
+                                         ${product.price}
+                                      <span> 250,000 vnd</span>
+                                 </div>
+                               </div>
                             </div>
-                            </c:forEach>
-                           
-                        </div>
+                    </div>
+                </div>
+                </c:forEach>
                     </div>
                     <!--Phân trang-->
                     <div class="pagination-product">

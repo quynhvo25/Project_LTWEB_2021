@@ -6,18 +6,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBConnect {
-    private static DBConnect dbConnect;
-    private static Connection connection;
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/fashion?useUnicode=trueScharacterEncoding=utf-8";
-    private static final String USER = "root";
-    private static final String PASS ="";
 
-    public static Statement connect() throws ClassNotFoundException, SQLException {
-      if(connection==null||connection.isClosed()){
-          Class.forName("com.mysql.jdbc.Driver");
-          connection = DriverManager.getConnection(DB_URL,USER,PASS);
+    public static Connection getConnection() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/ltwebbasic?useSSL=false";
+            String user = "root";
+            String password = "";
+            return DriverManager.getConnection(url, user, password);
+        } catch (ClassNotFoundException | SQLException e) {
+            return null;
 
-      }
-      return connection.createStatement();
+        }
     }
 }
+
+

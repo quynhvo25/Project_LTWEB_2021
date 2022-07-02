@@ -1,10 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
 %>
-<html lang="zxx">
 
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -111,6 +112,7 @@
     <!-- Latest Blog Section Begin -->
     <section class="latest-blog spad">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
@@ -118,17 +120,21 @@
                     </div>
                 </div>
             </div>
+
+<!-- ==================================================This is my test======================================= -->
+            <!--
+
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/cardigan/cardigan_in_may.jpg" alt="">
+                            <img src="../views/user/img/cardigan/cardigan_in_may.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="${pageContext.request.contextPath}/views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
+                                <li class="quick-view"><a href="../views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
                             </ul>
                         </div>
                         <div class="pi-text">
@@ -146,13 +152,13 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/croptop/croptop_daitay.jpg" alt="">
+                            <img src="../views/user/img/croptop/croptop_daitay.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="${pageContext.request.contextPath}/views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
+                                <li class="quick-view"><a href="../views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
                             </ul>
                         </div>
                         <div class="pi-text">
@@ -170,7 +176,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/croptop/croptop_theuhoacuc.jpg" alt="">
+                            <img src="../views/user/img/croptop/croptop_theuhoacuc.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -195,7 +201,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/Hoodie/hd_dom_den.jpg" alt="">
+                            <img src="../views/user/img/Hoodie/hd_dom_den.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -219,7 +225,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/quần/quan_caro.jpg" alt="">
+                            <img src="../views/user/img/quần/quan_caro.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -243,7 +249,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/quần/short_jean.jpg" alt="">
+                            <img src="../views/user/img/quần/short_jean.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -267,7 +273,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/Phụ%20kiện/balo_dathoitrang3ngan.jpg" alt="">
+                            <img src="../views/user/img/Phụ%20kiện/balo_dathoitrang3ngan.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -291,7 +297,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/Phụ%20kiện/tui_deo_canvas.jpg" alt="">
+                            <img src="../views/user/img/Phụ%20kiện/tui_deo_canvas.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -315,7 +321,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="${pageContext.request.contextPath}/views/user/img/áo%20khoác/aokhoac_BomberTorona.jpg" alt="">
+                            <img src="../views/user/img/áo%20khoác/aokhoac_BomberTorona.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -337,30 +343,74 @@
                     </div>
                 </div>
             </div>
-            <div class="benefit-items">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="single-benefit">
-                            <div class="sb-icon">
-                                <img src="${pageContext.request.contextPath}/views/user/img/icon-1.png" alt="">
+            -->
+
+            <div class="row">
+                <c:forEach items="${productList}" var="product" >
+                <div class="col-lg-4 col-sm-6">
+
+
+                    <div class="product-item">
+
+                        <div class="pi-pic">
+                            <img src="${pageContext.request.contextPath}${product.imagelink}" alt="">
+                            <div class="icon">
+                                <i class="icon_heart_alt"></i>
                             </div>
-                            <div class="sb-text">
-                                <h6>Giao hàng tận nơi</h6>
-                                <p>Miễn phí ship từ 5 sản phẩm</p>
+                            <ul>
+                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
+                                <li class="quick-view"><a href="#">+ Thêm vào giỏ hàng</a></li>
+                            </ul>
+                        </div>
+                        <div class="pi-text">
+                            <div class="catagory-name">Top</div>
+                            <a href="#">
+                                <h5>${product.name}</h5>
+                            </a>
+                            <div class="product-price">
+                                ${product.price}
+                                <span>250.000</span>
                             </div>
                         </div>
+
+
                     </div>
-                    <div class="col-lg-4">
-                        <div class="single-benefit">
-                            <div class="sb-icon">
-                                <img src="${pageContext.request.contextPath}/views/user/img/icon-2.png" alt="">
+
+
+
+
+
+                </div>
+                </c:forEach>
+
+                    </div>
+
+
+
+                    <div class="benefit-items">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="single-benefit">
+                                    <div class="sb-icon">
+                                        <img src="${pageContext.request.contextPath}/views/user/img/icon-1.png" alt="">
+                                    </div>
+                                    <div class="sb-text">
+                                        <h6>Giao hàng tận nơi</h6>
+                                        <p>Miễn phí ship từ 5 sản phẩm</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="sb-text">
-                                <h6>1 đổi 1 nếu lỗi hàng</h6>
-                                <p>Trong vòng 7 ngày</p>
-                                <p></p>
-                            </div>
-                        </div>
+                            <div class="col-lg-4">
+                                <div class="single-benefit">
+                                    <div class="sb-icon">
+                                        <img src="${pageContext.request.contextPath}/views/user/img/icon-2.png" alt="">
+                                    </div>
+                                    <div class="sb-text">
+                                        <h6>1 đổi 1 nếu lỗi hàng</h6>
+                                        <p>Trong vòng 7 ngày</p>
+                                        <p></p>
+                                    </div>
+                                </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-benefit">
@@ -375,6 +425,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Latest Blog Section End -->

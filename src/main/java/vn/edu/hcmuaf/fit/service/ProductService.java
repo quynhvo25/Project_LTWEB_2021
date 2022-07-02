@@ -1,5 +1,6 @@
 package vn.edu.hcmuaf.fit.service;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -10,26 +11,26 @@ public class ProductService {
     private ProductDAO productDAO = new ProductDAO();
 
 
-    public void deleteProduct(String masp) throws SQLException {
-        productDAO.deleteProduct(masp);
+    public void deleteProduct(Connection connection,String masp) throws SQLException {
+        productDAO.deleteProduct(connection,masp);
     }
 
-    public void insertProduct(Product product) throws SQLException {
-        productDAO.insertProduct(product);
-
-    }
-
-    public List<Product> queryProduct() throws SQLException {
-        return productDAO.queryProduct();
+    public void insertProduct(Connection connection,Product product) throws SQLException {
+        productDAO.insertProduct(connection,product);
 
     }
 
-    public void updateProduct( Product product) throws SQLException {
-        productDAO.updateProduct(product);
+    public List<Product> queryProduct(Connection connection) throws SQLException {
+        return productDAO.queryProduct(connection);
+
     }
 
-    public Product findProduct(String masp) throws SQLException {
-        return productDAO.findProduct(masp);
+    public void updateProduct( Connection connection, Product product) throws SQLException {
+        productDAO.updateProduct(connection,product);
+    }
+
+    public Product findProduct(Connection connection, String masp) throws SQLException {
+        return productDAO.findProduct(connection,masp);
     }
 
 }

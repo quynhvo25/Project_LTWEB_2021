@@ -124,7 +124,7 @@
             <nav class="nav-menu mobile-menu">
                 <ul>
                     <li class="active"><a href="/Project_LTWEB_2021/Home">TRANG CHỦ</a></li>
-                    <li><a href=${pageContext.request.contextPath}/views/user/list-product.jsp>SHOP</a>
+                    <li><a href="/Project_LTWEB_2021/Product-list">SHOP</a>
                         <ul class="dropdown">
                             <li><a href="#">TOP</a></li>
                             <li><a href="#">BOTTOM</a></li>

@@ -14680,7 +14680,7 @@ section {
         border:none;
         padding: 0 6px;
     }
-    .modal-add.open{
+    .modal-add.open, .js-modal-edit.open{
         display: flex;
     }
     .modal-container{
@@ -14737,7 +14737,7 @@ section {
         border-left: none;
 
     }
-    #modal-btn-add {
+    .site-btn {
         background: #e39218;
         color: #fff;
         font-size: 18px;
@@ -14746,6 +14746,7 @@ section {
         width: 100%;
         padding: 10px 0 10px;
     }
+
     /*radio-btn*/
     .active-radio{
         display: flex;
@@ -14767,7 +14768,7 @@ section {
     select#category-product {
         margin: 0 10px;
     }
-
+   /*-----MODAL-------*/
 
 /*FOOTER*/
 .footer {

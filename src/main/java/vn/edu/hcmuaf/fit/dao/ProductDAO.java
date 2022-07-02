@@ -28,11 +28,11 @@ public class ProductDAO {
 
     }
     /*show danh sach san Pham*/
-    public List<Product> queryProduct() throws SQLException {
+    public List<Product> queryProduct(Connection connection) throws SQLException {
         String sql = "Select a.masp, a.name, a.category, a.price, a.imagelink, a.description from product a ";
 
-        Connection conn = getConnection();
-        PreparedStatement pstm = conn.prepareStatement(sql);
+//        Connection conn = getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
 
         ResultSet rs = pstm.executeQuery();
         List<Product> list = new ArrayList<Product>();
@@ -57,11 +57,11 @@ public class ProductDAO {
     }
 
     /*them san pham*/
-    public void insertProduct(Product product) throws SQLException {
+    public void insertProduct(Connection connection,Product product) throws SQLException {
         String sql = "Insert into product(masp, name, category, price, imagelink, description) values (?,?,?,?,?,?)";
-        Connection conn = getConnection();
+//        Connection conn = getConnection();
 
-        PreparedStatement pstm = conn.prepareStatement(sql);
+        PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1, product.getMasp());
         pstm.setString(2, product.getName());
@@ -73,10 +73,10 @@ public class ProductDAO {
         pstm.executeUpdate();
     }
     /*chinh sua san pham*/
-    public void updateProduct( Product product) throws SQLException {
+    public void updateProduct(Connection connection, Product product) throws SQLException {
         String sql = "Update product set name =?, category=?, price=?, imagelink=?, description=? where masp=? ";
-        Connection conn = getConnection();
-        PreparedStatement pstm = conn.prepareStatement(sql);
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1, product.getName());
         pstm.setString(2, product.getCategory());
@@ -87,22 +87,22 @@ public class ProductDAO {
     }
 
     /*xoa san pham*/
-    public void deleteProduct(String masp) throws SQLException {
+    public void deleteProduct(Connection connection,String masp) throws SQLException {
         String sql = "Delete From product where masp= ?";
-        Connection conn = getConnection();
+//        Connection conn = getConnection();
 
-        PreparedStatement pstm = conn.prepareStatement(sql);
+        PreparedStatement pstm = connection.prepareStatement(sql);
 
         pstm.setString(1, masp);
 
         pstm.executeUpdate();
     }
     /*tim san pham theo ma san pham*/
-    public Product findProduct(String masp) throws SQLException {
+    public Product findProduct( Connection connection,String masp) throws SQLException {
         String sql = "Select masp, name, category, price, imagelink, description from product  where masp=?";
 
-        Connection conn = getConnection();
-        PreparedStatement pstm = conn.prepareStatement(sql);
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
         pstm.setString(1, masp);
 
         ResultSet rs = pstm.executeQuery();

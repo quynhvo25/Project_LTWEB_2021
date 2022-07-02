@@ -7,34 +7,34 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class LoginDAO {
+//
+//    public Connection getConnection() {
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//            String url = "jdbc:mysql://localhost:3306/ltwebbasic?useSSL=false";
+//            String user = "root";
+//            String password = "";
+//            return DriverManager.getConnection(url, user, password);
+//        } catch (ClassNotFoundException | SQLException e) {
+//            return null;
+//
+//        }
+//
+//    }
 
-    public Connection getConnection() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/ltwebbasic?useSSL=false";
-            String user = "root";
-            String password = "";
-            return DriverManager.getConnection(url, user, password);
-        } catch (ClassNotFoundException | SQLException e) {
-            return null;
-
-        }
-
-    }
 
 
-
-    public boolean checkLogin(String username, String pass) throws SQLException {
+    public boolean checkLogin( Connection conn,String username, String pass) throws SQLException {
 
         boolean isvalid = false;
 
         String sql = "SELECT * FROM useraccount WHERE username = ? and password= ?";
-        Connection connection = getConnection();
+//        Connection connection = getConnection();
         PreparedStatement statement = null;
-        if (connection != null) {
+        if (conn != null) {
             try {
 
-                statement = connection.prepareStatement(sql);
+                statement = conn.prepareStatement(sql);
 
                 statement.setString(1, username);
                 statement.setString(2, pass);
@@ -49,7 +49,7 @@ public class LoginDAO {
             } catch (SQLException e) {
                 e.printStackTrace();
             } finally {
-                connection.close();
+                conn.close();
                 statement.close();
             }
 

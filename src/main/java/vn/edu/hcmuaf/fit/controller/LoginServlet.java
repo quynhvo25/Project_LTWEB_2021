@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -11,7 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import vn.edu.hcmuaf.fit.db.DBConnect;
 import vn.edu.hcmuaf.fit.service.LoginService;
+
+
+
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -20,6 +25,7 @@ public class LoginServlet extends HttpServlet {
      */
     private LoginService loginService = new LoginService();
     private static final long serialVersionUID = 1L;
+
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -30,9 +36,9 @@ public class LoginServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         resp.setCharacterEncoding("utf-8");
 
-        try {
+        Connection conn = DBConnect.getConnection();
 
-            String username = req.getParameter("username");
+        String username = req.getParameter("username");
             String pass = req.getParameter("password");
 
             if (username.equals("admin") && pass.equals("admin")) {
@@ -40,25 +46,29 @@ public class LoginServlet extends HttpServlet {
                 dispatcher.forward(req, resp);
 
             } else {
-                boolean isvalid;
+                boolean isvalid = false;
 
-                isvalid = loginService.checkLogin(username, pass);
+                try {
+                    isvalid = loginService.checkLogin(conn,username, pass);
 
-                if (isvalid) {
-                    HttpSession session = req.getSession();
-                    session.setAttribute("dangnhapthanhcong", username);
-                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
-                    dispatcher.forward(req, resp);
-                } else {
-                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/user/login.jsp");
-                    dispatcher.forward(req, resp);
+                    if (isvalid) {
+                        HttpSession session = req.getSession();
+                        session.setAttribute("dangnhapthanhcong", username);
+                        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
+                        dispatcher.forward(req, resp);
+                    } else {
+                        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/user/login.jsp");
+                        dispatcher.forward(req, resp);
+                    }
+                    
+                } catch (SQLException throwables) {
+
                 }
+
+                
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
+        
     }
 
 }

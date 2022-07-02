@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import vn.edu.hcmuaf.fit.beans.UserAccount;
+import vn.edu.hcmuaf.fit.db.DBConnect;
 import vn.edu.hcmuaf.fit.service.UserServices;
 
 @WebServlet(name = "Register", urlPatterns = "/Register")
@@ -24,8 +26,7 @@ public class Register extends HttpServlet {
 
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setCharacterEncoding("utf-8");
         request.setCharacterEncoding("utf-8");
@@ -46,7 +47,9 @@ public class Register extends HttpServlet {
         userAccount.setNumberPhone(phone);
 
         try {
-            userServices.registerUserAccount(userAccount);
+            Connection connection = DBConnect.getConnection();
+              userServices.registerUserAccount(connection, userAccount);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

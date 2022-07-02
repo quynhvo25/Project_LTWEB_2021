@@ -1,6 +1,7 @@
 package vn.edu.hcmuaf.fit.controller;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import vn.edu.hcmuaf.fit.beans.Product;
+import vn.edu.hcmuaf.fit.db.DBConnect;
 import vn.edu.hcmuaf.fit.service.ProductService;
 
 @WebServlet(urlPatterns = { "/updateProduct" })
@@ -31,7 +33,8 @@ public class ProductAdminUpdateController extends HttpServlet {
         String errorString = null;
 
         try {
-            product = productService.findProduct(masp);
+            Connection connection = DBConnect.getConnection();
+            product = productService.findProduct(connection,masp);
         } catch (SQLException e) {
             e.printStackTrace();
             errorString = e.getMessage();
@@ -70,7 +73,8 @@ public class ProductAdminUpdateController extends HttpServlet {
         String errorString = null;
 
         try {
-            productService.updateProduct(product);
+            Connection connection = DBConnect.getConnection();
+            productService.updateProduct(connection,product);
         } catch (SQLException e) {
             e.printStackTrace();
             errorString = e.getMessage();
