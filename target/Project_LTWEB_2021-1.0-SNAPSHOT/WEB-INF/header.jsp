@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-00
+
 <header class="header-section">
     <div class="header-top">
         <div class="container">
@@ -14,8 +14,27 @@
                 </div>
             </div>
             <div class="ht-right">
-                <a href="${pageContext.request.contextPath}/views/user/login.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng nhập</a>
+                <a href="Logout-controller" class="login-panel"> <i class="fa fa-sign-out" ></i> Logout</a>
+
+                <%
+                    String name = (String) session.getAttribute("dangnhapthanhcong");
+                %>
+
+                <%
+                    if(name != null ){
+                %>
+
+                <a href="${pageContext.request.contextPath}/views/user/login.jsp" class="login-panel"><i class="fa fa-user"></i>wellcome :  <%=name %></a>
+
+                <%
+                }else {
+
+                %>
+                <a href="${pageContext.request.contextPath}/views/user/login.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng nhập </a>
+
+                <% }%>
                 <a href="${pageContext.request.contextPath}/views/user/register.jsp" class="login-panel"><i class="fa fa-user"></i>Đăng ký</a>
+
                 <div class="top-social">
                     <a href="#"><i class="ti-facebook"></i></a>
                     <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -30,8 +49,8 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
-                        <a href="../../WEB-INF/index.jsp">
-                            <img src="img/logoweb.png" alt="">
+                        <a href="/Project_LTWEB_2021/Home">
+                            <img src="${pageContext.request.contextPath}/views/user/img/logoweb.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -48,7 +67,7 @@
                         <li class="cart-icon">
                             <a href="#">
                                 <i class="icon_bag_alt"></i>
-                                <span>3</span>
+                                <span>0</span>
                             </a>
                             <div class="cart-hover">
                                 <div class="select-items">
@@ -91,7 +110,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="cart-price">350.000 vnđ</li>
+                        <li class="cart-price">0 vnđ</li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +124,7 @@
             <nav class="nav-menu mobile-menu">
                 <ul>
                     <li class="active"><a href="/Project_LTWEB_2021/Home">TRANG CHỦ</a></li>
-                    <li><a href=/Project_LTWEB_2021/ProductList>SHOP</a>
+                    <li><a href=${pageContext.request.contextPath}/views/user/list-product.jsp>SHOP</a>
                         <ul class="dropdown">
                             <li><a href="#">TOP</a></li>
                             <li><a href="#">BOTTOM</a></li>

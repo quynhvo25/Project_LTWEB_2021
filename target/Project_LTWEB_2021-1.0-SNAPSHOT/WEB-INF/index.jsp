@@ -26,7 +26,34 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/style.css" type="text/css">
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/views/user/img/favicon.ico"/>
 </head>
+<style>
+    .slider {
+        background: black;
+        color: white;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        margin-bottom: 181px;
 
+    }
+    .slide {
+        width: 100%;
+        flex-shrink: 0;
+        height: 100%;
+    }
+    .slider {
+    ...
+
+    -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    .img-slider{
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+
+</style>
 <body>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -38,41 +65,48 @@
     <!-- Header End -->
 
 
-    <!-- Hero Section Begin -->
-    <section class="hero-section">
-        <div class="hero-items owl-carousel">
-            <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <span>Bag,kids</span>
-                            <h1>Black friday</h1>
-                            <a href="#" class="primary-btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="off-card">
-                        <h2>Sale <span>50%</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="single-hero-items set-bg" data-setbg="img/hero-2.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <span>Bag,kids</span>
-                            <h1>Black friday</h1>
+<%--    <!-- Hero Section Begin -->--%>
+<%--    <section class="hero-section">--%>
+<%--        <div class="hero-items owl-carousel">--%>
+<%--            <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">--%>
+<%--                <div class="container">--%>
+<%--                    <div class="row">--%>
+<%--                        <div class="col-lg-5">--%>
+<%--&lt;%&ndash;                            <span>Bag,kids</span>&ndash;%&gt;--%>
+<%--&lt;%&ndash;                            <h1>Black friday</h1>&ndash;%&gt;--%>
+<%--                            <a href="#" class="primary-btn">Shop Now</a>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="off-card">--%>
+<%--                        <h2>Sale <span>50%</span></h2>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="single-hero-items set-bg" data-setbg="img/hero-2.jpg">--%>
+<%--                <div class="container">--%>
+<%--                    <div class="row">--%>
+<%--                        <div class="col-lg-5">--%>
+<%--                            <img src="/views/user/img/unishop.png">--%>
+<%--                            <span>Bag,kids</span>--%>
+<%--                            <h1>Black friday</h1>--%>
 
-                            <a href="#" class="primary-btn">Shop Now</a>
-                        </div>
-                    </div>
-                    <div class="off-card">
-                        <h2>Sale <span>50%</span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
+<%--                            <a href="#" class="primary-btn">Shop Now</a>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="off-card">--%>
+<%--                        <h2>Sale <span>50%</span></h2>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </section>--%>
+<%--    <!-- Hero Section End -->--%>
+
+    <div class="slider">
+        <div class="slide" id="slide-1"><img class="img-slider" src="${pageContext.request.contextPath}/views/user/img/unishop.png"></div>
+        <div class="slide" id="slide-2">2</div>
+
+    </div>
 
     <!-- Latest Blog Section Begin -->
     <section class="latest-blog spad">
@@ -88,13 +122,13 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/cardigan/cardigan_in_may.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/cardigan/cardigan_in_may.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="../views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
+                                <li class="quick-view"><a href="${pageContext.request.contextPath}/views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
                             </ul>
                         </div>
                         <div class="pi-text">
@@ -112,13 +146,13 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/croptop/croptop_daitay.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/croptop/croptop_daitay.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="../views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
+                                <li class="quick-view"><a href="${pageContext.request.contextPath}/views/user/shopping-cart.jsp">+ Thêm vào giỏ hàng</a></li>
                             </ul>
                         </div>
                         <div class="pi-text">
@@ -136,7 +170,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/croptop/croptop_theuhoacuc.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/croptop/croptop_theuhoacuc.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -161,7 +195,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/Hoodie/hd_dom_den.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/Hoodie/hd_dom_den.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -185,7 +219,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/quần/quan_caro.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/quần/quan_caro.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -209,7 +243,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/quần/short_jean.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/quần/short_jean.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -233,7 +267,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/Phụ%20kiện/balo_dathoitrang3ngan.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/Phụ%20kiện/balo_dathoitrang3ngan.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -257,7 +291,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/Phụ%20kiện/tui_deo_canvas.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/Phụ%20kiện/tui_deo_canvas.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -281,7 +315,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img src="../views/user/img/áo%20khoác/aokhoac_BomberTorona.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/views/user/img/áo%20khoác/aokhoac_BomberTorona.jpg" alt="">
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
                             </div>
@@ -308,7 +342,7 @@
                     <div class="col-lg-4">
                         <div class="single-benefit">
                             <div class="sb-icon">
-                                <img src="../views/user/img/icon-1.png" alt="">
+                                <img src="${pageContext.request.contextPath}/views/user/img/icon-1.png" alt="">
                             </div>
                             <div class="sb-text">
                                 <h6>Giao hàng tận nơi</h6>
@@ -319,7 +353,7 @@
                     <div class="col-lg-4">
                         <div class="single-benefit">
                             <div class="sb-icon">
-                                <img src="../views/user/img/icon-2.png" alt="">
+                                <img src="${pageContext.request.contextPath}/views/user/img/icon-2.png" alt="">
                             </div>
                             <div class="sb-text">
                                 <h6>1 đổi 1 nếu lỗi hàng</h6>
@@ -331,7 +365,7 @@
                     <div class="col-lg-4">
                         <div class="single-benefit">
                             <div class="sb-icon">
-                                <img src="../views/user/img/icon-1.png" alt="">
+                                <img src="${pageContext.request.contextPath}/views/user/img/icon-1.png" alt="">
                             </div>
                             <div class="sb-text">
                                 <h6>Giao hàng nhanh</h6>

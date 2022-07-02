@@ -79,11 +79,11 @@
                         </div>
                         <div class="group-input">
                             <label for="pass">Mật khẩu *</label>
-                            <input type="text" name="pass">
+                            <input type="password" name="pass">
                         </div>
                         <div class="group-input">
                             <label for="re-pass">Nhập lại mật khẩu *</label>
-                            <input type="text" name="repass">
+                            <input type="password" name="repass">
                         </div>
                         <button type="submit" class="site-btn register-btn">ĐĂNG KÝ</button>
                     </form>

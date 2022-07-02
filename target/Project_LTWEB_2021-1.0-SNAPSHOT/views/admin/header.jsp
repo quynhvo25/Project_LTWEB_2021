@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
+
 <html lang="en">
  
 <head>
@@ -7,19 +12,26 @@
 
     <!-- Title Page-->
     <title>Header</title>
+    <link href="${pageContext.request.contextPath}/views/admin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
-   <!-- Fontfaces CSS-->
-   <link href="css/font-face.css" rel="stylesheet" media="all">
-   <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-   <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-   <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <!-- Bootstrap CSS-->
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
-   <!-- Bootstrap CSS-->
-   <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <!-- Vendor CSS-->
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="${pageContext.request.contextPath}/views/admin/vendor/vector-map/jqvmap.min.css" rel="stylesheet" media="all">
 
-   
-   <!-- Main CSS-->
-   <link href="css/theme.css" rel="stylesheet" media="all">
+    <!-- Main CSS-->
+    <link rel="stylesheet"  href="${pageContext.request.contextPath}/views/admin/css/theme.css" type="text/css" >
 </head>
 <body>
     <header class="header-desktop2">
