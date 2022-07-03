@@ -5,7 +5,7 @@
     response.setCharacterEncoding("UTF-8");
 %>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="ISO-8859-1">
 <title>Cập nhật sản phẩm</title>
@@ -56,10 +56,10 @@
 
                     <tr class="row-modal-2">
                         <td class="modal-td">
-                            <input id="masp" name="masp" type="text" class="modal-input" name="${product.masp}" placeholder="${product.masp}">
+                            <input id="masp" name="masp" type="text" class="modal-input" name="${product.masp}" value="${product.masp}">
                         </td>
                         <td class="modal-td">
-                            <input id="name" name="name" type="text" class="modal-input" placeholder="${product.name}">
+                            <input id="name" name="name" type="text" class="modal-input" value="${product.name}">
                         </td>
                     </tr>
 
@@ -70,7 +70,7 @@
                             </label>
                         </th>
                         <th class="modal-th">
-                            <label for="price " class="modal-label">
+                            <label for="price" class="modal-label">
                                 Giá
                             </label>
                         </th>
@@ -79,10 +79,10 @@
 
                     <tr class="row-modal-2">
                         <td class="modal-td">
-                            <input id="category" name="category" type="text" class="modal-input" placeholder="${product.category}">
+                            <input id="category" name="category" type="text" class="modal-input" value="${product.category}">
                         </td>
                         <td class="modal-td">
-                            <input id="price" name="price" type="text" class="modal-input" placeholder="${product.price}">
+                            <input id="price" name="price" type="text" class="modal-input" value="${product.price}">
                         </td>
                     </tr>
 
@@ -102,10 +102,10 @@
 
                     <tr class="row-modal-2">
                         <td class="modal-td">
-                            <input id="imagelink" name="imagelink" type="text" class="modal-input" placeholder="${product.imagelink}">
+                            <input id="imagelink" name="imagelink" type="text" class="modal-input" value="${product.imagelink}">
                         </td>
                         <td class="modal-td">
-                            <input id="description" name="description" type="text" class="modal-input" placeholder="${product.description}">
+                            <input id="description" name="description" type="text" class="modal-input" value="${product.description}">
                         </td>
                     </tr>
 

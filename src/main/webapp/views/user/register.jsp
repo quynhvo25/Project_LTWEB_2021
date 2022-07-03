@@ -1,6 +1,12 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html lang="zxx">
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
+
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -60,6 +66,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="register-form">
                     <h2>ĐĂNG KÝ</h2>
+
                     <form action="/Project_LTWEB_2021/Register" method="post">
                         <div class="group-input">
                             <label for="username">Tên tài khoản *</label>
@@ -79,17 +86,19 @@
                         </div>
                         <div class="group-input">
                             <label for="pass">Mật khẩu *</label>
-                            <input type="password" name="pass">
+                            <input type="password" name="pass" id="pass" required  onkeyup='check();'>
                         </div>
                         <div class="group-input">
                             <label for="re-pass">Nhập lại mật khẩu *</label>
-                            <input type="password" name="repass">
+                            <input type="password" name="repass" id="repass" onkeyup='check();'>
+                            <span id='message'></span>
                         </div>
-                        <button type="submit" class="site-btn register-btn">ĐĂNG KÝ</button>
+                        <button type="submit" class="site-btn register-btn" id="create"  class="submit_btn" onclick="wrong_pass_alert()">ĐĂNG KÝ</button>
                     </form>
                     <div class="switch-login">
                         <a href="${pageContext.request.contextPath}/views/user/login.jsp" class="or-login">hoặc ĐĂNG NHẬP</a>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -148,6 +157,20 @@
     </div>
 </footer>
 <!-- Footer Section End -->
+
+<!-- function to check password -->
+<script>
+    var check = function() {
+        if (document.getElementById('pass').value ==
+            document.getElementById('repass').value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'matching';
+        } else {
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'vui lòng nhập đúng password và repassword';
+        }
+    }
+</script>
 
 <!-- Js Plugins -->
 <script src="${pageContext.request.contextPath}/views/user/js/jquery-3.3.1.min.js"></script>

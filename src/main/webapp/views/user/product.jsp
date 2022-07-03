@@ -1,5 +1,17 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@page import= "vn.edu.hcmuaf.fit.beans.Product" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+    response.setCharacterEncoding("UTF-8");
+%>
+<%
+    String error = (String) request.getAttribute("error");
+    Product product = (Product) request.getAttribute("product");
+
+%>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -7,21 +19,24 @@
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CHI TIáº¾T Sáº¢N PHáº¨M</title>
+    <title>CHI TIẾT SẢN PHẨM </title>
+
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/views/user/css/style.css" type="text/css">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/views/user/img/favicon.ico"/>
 </head>
 
 <body>
@@ -31,127 +46,136 @@
 </div>
 
 <!-- Header Section Begin -->
-<header class="header-section">
-    <div class="header-top">
-        <div class="container">
-            <div class="ht-left">
-                <div class="mail-service">
-                    <i class=" fa fa-envelope"></i>
-                    unishop@gmail.com
-                </div>
-                <div class="phone-service">
-                    <i class=" fa fa-phone"></i>
-                    +84 342 987 861
-                </div>
-            </div>
-            <div class="ht-right">
-                <a href="login.jsp" class="login-panel"><i class="fa fa-user"></i>ÄÄng nháº­p</a>
-                <a href="register.jsp" class="login-panel"><i class="fa fa-user"></i>ÄÄng kÃ½</a>
-                <div class="top-social">
-                    <a href="#"><i class="ti-facebook"></i></a>
-                    <a href="#"><i class="ti-twitter-alt"></i></a>
-                    <a href="#"><i class="ti-linkedin"></i></a>
-                    <a href="#"><i class="ti-pinterest"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="inner-header">
-            <div class="row">
-                <div class="col-lg-2 col-md-2">
-                    <div class="logo">
-                        <a href="../../WEB-INF/index.jsp">
-                            <img src="img/logoweb.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-7">
-                    <div class="advanced-search">
-                        <div class="input-group" style="position: unset">
-                            <input type="text" placeholder="TÃ¬m kiáº¿m">
-                            <button type="button"><i class="ti-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 text-right col-md-3">
-                    <ul class="nav-right">
-                        <li class="cart-icon">
-                            <a href="#">
-                                <i class="icon_bag_alt"></i>
-                                <span>3</span>
-                            </a>
-                            <div class="cart-hover">
-                                <div class="select-items">
-                                    <table>
-                                        <tbody>
-                                        <tr>
-                                            <td class="si-pic"><img src="img/quáº§n/quan_3_soc.jpg" alt=""></td>
-                                            <td class="si-text">
-                                                <div class="product-selected">
-                                                    <p>150.000 vnÄ x 1</p>
-                                                    <h6>Quáº§n 3 sá»c</h6>
-                                                </div>
-                                            </td>
-                                            <td class="si-close">
-                                                <i class="ti-close"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="si-pic"><img src="img/sweater/sweater_anti.jpg" alt=""></td>
-                                            <td class="si-text">
-                                                <div class="product-selected">
-                                                    <p>200.000 vnÄ x 1</p>
-                                                    <h6>Sweater Antisol</h6>
-                                                </div>
-                                            </td>
-                                            <td class="si-close">
-                                                <i class="ti-close"></i>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="select-total">
-                                    <span>Tá»ng cá»ng:</span>
-                                    <h5>350.000 vnÄ</h5>
-                                </div>
-                                <div class="select-button">
-                                    <a href="shopping-cart.jsp" class="primary-btn view-card">Xem giá» hÃ ng</a>
-                                    <a href="check-out.jsp" class="primary-btn checkout-btn">Thanh toÃ¡n</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="cart-price">350.000 vnÄ</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="nav-item">
-        <div class="container">
-            <div class="nav-depart">
-
-            </div>
-            <nav class="nav-menu mobile-menu">
-                <ul>
-                    <li class="active"><a href="../../WEB-INF/index.jsp">TRANG CHá»¦</a></li>
-                    <li><a href="list-product.jsp">SHOP</a>
-                        <ul class="dropdown">
-                            <li><a href="#">TOP</a></li>
-                            <li><a href="#">BOTTOM</a></li>
-                            <li><a href="#">ACCESSORIES</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./blog.html">ABOUT</a></li>
-                    <li><a href="contact.jsp">CONTACT</a></li>
-                </ul>
-            </nav>
-            <div id="mobile-menu-wrap"></div>
-        </div>
-    </div>
-</header>
+    <jsp:include page="/WEB-INF/header.jsp" />
 <!-- Header End -->
+
+
+
+<!-- Header Section Begin -->
+<%--<header class="header-section">--%>
+<%--    <div class="header-top">--%>
+<%--        <div class="container">--%>
+<%--            <div class="ht-left">--%>
+<%--                <div class="mail-service">--%>
+<%--                    <i class=" fa fa-envelope"></i>--%>
+<%--                    unishop@gmail.com--%>
+<%--                </div>--%>
+<%--                <div class="phone-service">--%>
+<%--                    <i class=" fa fa-phone"></i>--%>
+<%--                    +84 342 987 861--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="ht-right">--%>
+<%--                <a href="login.jsp" class="login-panel"><i class="fa fa-user"></i>ÄÄng nháº­p</a>--%>
+<%--                <a href="register.jsp" class="login-panel"><i class="fa fa-user"></i>ÄÄng kÃ½</a>--%>
+<%--                <div class="top-social">--%>
+<%--                    <a href="#"><i class="ti-facebook"></i></a>--%>
+<%--                    <a href="#"><i class="ti-twitter-alt"></i></a>--%>
+<%--                    <a href="#"><i class="ti-linkedin"></i></a>--%>
+<%--                    <a href="#"><i class="ti-pinterest"></i></a>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="container">--%>
+<%--        <div class="inner-header">--%>
+<%--            <div class="row">--%>
+<%--                <div class="col-lg-2 col-md-2">--%>
+<%--                    <div class="logo">--%>
+<%--                        <a href="../../WEB-INF/index.jsp">--%>
+<%--                            <img src="img/logoweb.png" alt="">--%>
+<%--                        </a>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="col-lg-7 col-md-7">--%>
+<%--                    <div class="advanced-search">--%>
+<%--                        <div class="input-group" style="position: unset">--%>
+<%--                            <input type="text" placeholder="TÃ¬m kiáº¿m">--%>
+<%--                            <button type="button"><i class="ti-search"></i></button>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="col-lg-3 text-right col-md-3">--%>
+<%--                    <ul class="nav-right">--%>
+<%--                        <li class="cart-icon">--%>
+<%--                            <a href="#">--%>
+<%--                                <i class="icon_bag_alt"></i>--%>
+<%--                                <span>3</span>--%>
+<%--                            </a>--%>
+<%--                            <div class="cart-hover">--%>
+<%--                                <div class="select-items">--%>
+<%--                                    <table>--%>
+<%--                                        <tbody>--%>
+<%--                                        <tr>--%>
+<%--                                            <td class="si-pic"><img src="img/quáº§n/quan_3_soc.jpg" alt=""></td>--%>
+<%--                                            <td class="si-text">--%>
+<%--                                                <div class="product-selected">--%>
+<%--                                                    <p>150.000 vnÄ x 1</p>--%>
+<%--                                                    <h6>Quáº§n 3 sá»c</h6>--%>
+<%--                                                </div>--%>
+<%--                                            </td>--%>
+<%--                                            <td class="si-close">--%>
+<%--                                                <i class="ti-close"></i>--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        <tr>--%>
+<%--                                            <td class="si-pic"><img src="img/sweater/sweater_anti.jpg" alt=""></td>--%>
+<%--                                            <td class="si-text">--%>
+<%--                                                <div class="product-selected">--%>
+<%--                                                    <p>200.000 vnÄ x 1</p>--%>
+<%--                                                    <h6>Sweater Antisol</h6>--%>
+<%--                                                </div>--%>
+<%--                                            </td>--%>
+<%--                                            <td class="si-close">--%>
+<%--                                                <i class="ti-close"></i>--%>
+<%--                                            </td>--%>
+<%--                                        </tr>--%>
+<%--                                        </tbody>--%>
+<%--                                    </table>--%>
+<%--                                </div>--%>
+<%--                                <div class="select-total">--%>
+<%--                                    <span>Tá»ng cá»ng:</span>--%>
+<%--                                    <h5>350.000 vnÄ</h5>--%>
+<%--                                </div>--%>
+<%--                                <div class="select-button">--%>
+<%--                                    <a href="shopping-cart.jsp" class="primary-btn view-card">Xem giá» hÃ ng</a>--%>
+<%--                                    <a href="check-out.jsp" class="primary-btn checkout-btn">Thanh toÃ¡n</a>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </li>--%>
+<%--                        <li class="cart-price">350.000 vnÄ</li>--%>
+<%--                    </ul>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="nav-item">--%>
+<%--        <div class="container">--%>
+<%--            <div class="nav-depart">--%>
+
+<%--            </div>--%>
+<%--            <nav class="nav-menu mobile-menu">--%>
+<%--                <ul>--%>
+<%--                    <li class="active"><a href="../../WEB-INF/index.jsp">TRANG CHá»¦</a></li>--%>
+<%--                    <li><a href="list-product.jsp">SHOP</a>--%>
+<%--                        <ul class="dropdown">--%>
+<%--                            <li><a href="#">TOP</a></li>--%>
+<%--                            <li><a href="#">BOTTOM</a></li>--%>
+<%--                            <li><a href="#">ACCESSORIES</a></li>--%>
+<%--                        </ul>--%>
+<%--                    </li>--%>
+<%--                    <li><a href="./blog.html">ABOUT</a></li>--%>
+<%--                    <li><a href="contact.jsp">CONTACT</a></li>--%>
+<%--                </ul>--%>
+<%--            </nav>--%>
+<%--            <div id="mobile-menu-wrap"></div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</header>--%>
+<!-- Header End -->
+
+
+
 
 
 <!-- Breadcrumb Section Begin -->
@@ -201,15 +225,15 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="product-pic-zoom">
-                            <img class="product-big-img" src="img/cardigan/cardigan_in_may.jpg" alt="">
+                            <img class="product-big-img" src="${pageContext.request.contextPath}${product.imagelink}" alt="">
                             <div class="zoom-icon">
                                 <i class="fa fa-search-plus"></i>
                             </div>
                         </div>
                         <div class="product-thumbs">
                             <div class="product-thumbs-track ps-slider owl-carousel">
-                                <div class="pt active" data-imgbigurl="img/cardigan/cardigan_in_may.jpg"><img
-                                        src="img/cardigan/cardigan_in_may.jpg" alt=""></div>
+                                <div class="pt active" data-imgbigurl="${pageContext.request.contextPath}${product.imagelink}"><img
+                                        src="${pageContext.request.contextPath}${product.imagelink}" alt=""></div>
 
                             </div>
                         </div>
@@ -218,7 +242,7 @@
                         <div class="product-details">
                             <div class="pd-title">
                                 <span>Cardigan</span>
-                                <h3>Cardigan Emotion</h3>
+                                <h3>${product.price}</h3>
                                 <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                             </div>
                             <div class="pd-rating">
@@ -230,8 +254,8 @@
                                 <span>(5)</span>
                             </div>
                             <div class="pd-desc">
-                                <p>Ão KhoÃ¡c Ná» BÃ´ng CARDIGAN EMOTION Form Rá»ng Ulzzang</p>
-                                <h4>185.000 <span>200.000</span></h4>
+                                <p>${product.description}</p>
+                                <h4> ${product.price} <span>200.000</span></h4>
                             </div>
                             <div class="pd-color">
                                 <h6>Color</h6>
@@ -272,7 +296,7 @@
                                 <div class="pro-qty">
                                     <input type="text" value="1">
                                 </div>
-                                <a href="#" class="primary-btn pd-cart">ThÃªm vÃ o giá» hÃ ng</a>
+                                <a href="#" class="primary-btn pd-cart">Thêm sản phẩm vào giỏ hàng</a>
                             </div>
 
                             <div class="pd-share">
@@ -306,10 +330,8 @@
                                 <div class="product-content">
                                     <div class="row">
                                         <div class="col-lg-7">
-                                            <h5>MÃ´ táº£ sáº£n pháº©m:</h5>
-                                            <p>Cháº¥t liá»u Ná» bÃ´ng dÃ y dáº·n, má»n vÃ  Ãªm mang láº¡i cáº£m giÃ¡c dá» chá»u khi máº·c.</p>
-                                            <h5>MeÌ£o ÄÃªÌ giÆ°Ì saÌn phÃ¢Ìm luÃ´n ÄeÌ£p:</h5>
-                                            <p>Giáº·t á» nhiá»t Äá» bÃ¬nh thÆ°á»ng, vá»i Äá» cÃ³ mÃ u tÆ°Æ¡ng tá»±. Háº¡n cháº¿ sá»­ dá»¥ng mÃ¡y sáº¥y vÃ  á»§i (náº¿u cÃ³) thÃ¬ á» nhiá»t Äá» thÃ­ch há»£p. KhÃ´ng sÆ°Ì duÌ£ng chÃ¢Ìt tÃ¢Ìy rÆ°Ìa maÌ£nh. </p>
+                                            <h5>${product.name}</h5>
+                                            <p>${product.description}</p>
                                         </div>
                                         <div class="col-lg-5">
                                             <img src="img/product-single/tab-desc.jpg" alt="">
@@ -336,7 +358,7 @@
                                         <tr>
                                             <td class="p-catagory">GiÃ¡</td>
                                             <td>
-                                                <div class="p-price">185.000</div>
+                                                <div class="p-price">${product.price}</div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -505,7 +527,7 @@
                             <h5>Cardigan basic</h5>
                         </a>
                         <div class="product-price">
-                            185.000
+                            ${product.price}
                             <span>250.000</span>
                         </div>
                     </div>
@@ -529,7 +551,7 @@
                             <h5>Cardigan 2 tÃºi ngang</h5>
                         </a>
                         <div class="product-price">
-                            185.000
+                            ${product.price}
                             <span>200.000</span>
                         </div>
                     </div>
@@ -541,67 +563,72 @@
 <!-- Related Products Section End -->
 
 <!-- Footer Section Begin -->
-<footer class="footer-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <a href="#"><img src="img/logo-footer.png" alt=""></a>
-                    </div>
-                    <ul>
-                        <li>Äá»a chá»: Kiot NÃ´ng LÃ¢m - Tp Thá»§ Äá»©c - Tp Há» ChÃ­ Minh</li>
-                        <li>Äiá»n thoáº¡i: +84 342 987 861</li>
-                        <li>Email: unÃ­shop@gmail.com</li>
-                    </ul>
-                    <div class="footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-pinterest"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 offset-lg-1">
-                <div class="footer-widget">
-                    <h5>LiÃªn káº¿t</h5>
-                    <ul>
-                        <li><a href="#">TÃ¬m kiáº¿m</a></li>
-                        <li><a href="#">Giá»i thiá»u</a></li>
-                        <li><a href="#">ChÃ­nh sÃ¡ch Äá»i tráº£</a></li>
-                        <li><a href="#">ChÃ­nh sÃ¡ch báº£o máº­t</a></li>
-                        <li><a href="#">Äiá»u khoáº£n dá»ch vá»¥</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyright-reserved">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright-text">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Láº¬P TRÃNH WEB_NHÃM 27_2021-2022
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<%--<footer class="footer-section">--%>
+<%--    <div class="container">--%>
+<%--        <div class="row">--%>
+<%--            <div class="col-lg-3">--%>
+<%--                <div class="footer-left">--%>
+<%--                    <div class="footer-logo">--%>
+<%--                        <a href="#"><img src="img/logo-footer.png" alt=""></a>--%>
+<%--                    </div>--%>
+<%--                    <ul>--%>
+<%--                        <li>Äá»a chá»: Kiot NÃ´ng LÃ¢m - Tp Thá»§ Äá»©c - Tp Há» ChÃ­ Minh</li>--%>
+<%--                        <li>Äiá»n thoáº¡i: +84 342 987 861</li>--%>
+<%--                        <li>Email: unÃ­shop@gmail.com</li>--%>
+<%--                    </ul>--%>
+<%--                    <div class="footer-social">--%>
+<%--                        <a href="#"><i class="fa fa-facebook"></i></a>--%>
+<%--                        <a href="#"><i class="fa fa-instagram"></i></a>--%>
+<%--                        <a href="#"><i class="fa fa-twitter"></i></a>--%>
+<%--                        <a href="#"><i class="fa fa-pinterest"></i></a>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-2 offset-lg-1">--%>
+<%--                <div class="footer-widget">--%>
+<%--                    <h5>LiÃªn káº¿t</h5>--%>
+<%--                    <ul>--%>
+<%--                        <li><a href="#">TÃ¬m kiáº¿m</a></li>--%>
+<%--                        <li><a href="#">Giá»i thiá»u</a></li>--%>
+<%--                        <li><a href="#">ChÃ­nh sÃ¡ch Äá»i tráº£</a></li>--%>
+<%--                        <li><a href="#">ChÃ­nh sÃ¡ch báº£o máº­t</a></li>--%>
+<%--                        <li><a href="#">Äiá»u khoáº£n dá»ch vá»¥</a></li>--%>
+<%--                    </ul>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="copyright-reserved">--%>
+<%--        <div class="container">--%>
+<%--            <div class="row">--%>
+<%--                <div class="col-lg-12">--%>
+<%--                    <div class="copyright-text">--%>
+<%--                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->--%>
+<%--                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Láº¬P TRÃNH WEB_NHÃM 27_2021-2022--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</footer>--%>
+<!-- Footer Section Begin -->
+<jsp:include page="/WEB-INF/footer.jsp"/>
+<!-- Footer Section End -->
+
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.countdown.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
-<script src="js/jquery.zoom.min.js"></script>
-<script src="js/jquery.dd.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<!-- Js Plugins -->
+<script src="${pageContext.request.contextPath}/views/user/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/jquery-ui.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/jquery.countdown.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/jquery.zoom.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/jquery.dd.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/jquery.slicknav.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/views/user/js/main.js"></script>
 </body>
 
 </html>

@@ -27,6 +27,8 @@ public class ProductAdminController extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
 
         String errorString = null;
         List<Product> list = null;

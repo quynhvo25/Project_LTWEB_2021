@@ -8,7 +8,7 @@
     String error = (String) request.getAttribute("error");
 
 %>
-<html lang="zxx">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">

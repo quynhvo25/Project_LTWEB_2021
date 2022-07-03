@@ -4,7 +4,7 @@
     response.setCharacterEncoding("UTF-8");
 %>
 
-<html lang="en">
+<html lang="vi">
  
 <head>
     <meta charset="UTF-8">
@@ -34,13 +34,20 @@
     <link rel="stylesheet"  href="${pageContext.request.contextPath}/views/admin/css/theme.css" type="text/css" >
 </head>
 <body>
+
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+
     <header class="header-desktop2">
         <div class="section__content section__content--p30">
             <div class="container-fluid">
                 <div class="header-wrap2">
                     <div class="logo d-block d-lg-none">
-                        <a href="#">
-                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                        <a href="Admin-Home">
+                            <img src="${pageContext.request.contextPath}/views/admin/images/icon/logo-white.png" alt="CoolAdmin" />
                         </a>
                     </div>
                     <div class="header-button2">
@@ -56,7 +63,7 @@
                             </div>
                         </div>
                         <div class="header-button-item has-noti js-item-menu">
-                            <i class="zmdi zmdi-notifications"></i>
+                            <a href="#"><i class="zmdi zmdi-notifications"></i></a>
                             <div class="notifi-dropdown js-dropdown">
                                 <div class="notifi__title">
                                     <p>You have 3 Notifications</p>
@@ -95,6 +102,9 @@
                         </div>
                         <div class="header-button-item mr-0 js-sidebar-btn">
                             <i class="zmdi zmdi-menu"></i>
+                        </div>
+                        <div class="account-dropdown__item" >
+                            <a href="Logout-controller" class="login-panel"> <i class="zmdi zmdi-account"></i>Logout</a>
                         </div>
                         <div class="setting-menu js-right-sidebar d-none d-lg-block">
                             <div class="account-dropdown__body">

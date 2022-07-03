@@ -1,11 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%
-    request.setCharacterEncoding("UTF-8");
-    response.setCharacterEncoding("UTF-8");
+    request.setCharacterEncoding("utf-8");
+    response.setCharacterEncoding("utf-8");
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
 
     <meta charset="UTF-8">
@@ -42,8 +42,8 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar2">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo-white.png" alt="Admin" />
+                <a href="Admin-Home">
+                    <img src="${pageContext.request.contextPath}/views/admin/images/icon/logo-white.png" alt="Admin" />
                 </a>
             </div>
             <div class="menu-sidebar2__content js-scrollbar1">
@@ -183,6 +183,16 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
+
+                            <div class="account-dropdown__item" >
+                                <a href="Logout-controller" class="login-panel"> <i class="zmdi zmdi-account"></i>Logout</a>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>

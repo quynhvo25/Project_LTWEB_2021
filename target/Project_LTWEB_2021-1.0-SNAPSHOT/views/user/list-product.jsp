@@ -9,7 +9,7 @@
 
 %>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -128,7 +128,9 @@
                     <div class="col-lg-4 col-sm-6">
                           <div class="product-item">
                               <div class="pi-pic">
-                                  <img src="${pageContext.request.contextPath}${product.imagelink}" alt="">
+                                  <a href="productDetail?masp=${product.masp}">
+                                    <img src="${pageContext.request.contextPath}${product.imagelink}" alt="">
+                                  </a>
                                  <div class="icon">
                                     <i class="icon_heart_alt"></i>
                               </div>

@@ -12,7 +12,7 @@
 
 
 
-<head>
+<head lang="vi">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -47,12 +47,18 @@
 </head>
 
 <body class="animsition">
+
+<!-- Page Preloder -->
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
 <div class="page-wrapper">
 
     <aside class="menu-sidebar2">
         <div class="logo">
-            <a href="#">
-                <img src="images/icon/logo-white.png" alt="Admin" />
+            <a href="Admin-Home">
+                <img src="${pageContext.request.contextPath}/views/admin/images/icon/logo.png" alt="Admin" />
             </a>
         </div>
         <div class="menu-sidebar2__content js-scrollbar1">
@@ -99,8 +105,8 @@
                 <div class="container-fluid">
                     <div class="header-wrap2">
                         <div class="logo d-block d-lg-none">
-                            <a href="#">
-                                <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                            <a href="Admin-Home">
+                                <img src="${pageContext.request.contextPath}/views/admin/images/icon/logo-white.png" alt="CoolAdmin" />
                             </a>
                         </div>
                         <div class="header-button2">
@@ -193,7 +199,7 @@
 
 
                             <div class="account-dropdown__item" >
-                                <a href="Logout-controller" class="login-panel"> <i class="zmdi zmdi-account"></i> Logout</a>
+                                <a href="Logout-controller" class="login-panel"> <i class="zmdi zmdi-account"></i>Logout</a>
                             </div>
 
 

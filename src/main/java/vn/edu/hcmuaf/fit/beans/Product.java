@@ -24,6 +24,15 @@ public class Product implements Serializable {
         this.imagelink = imagelink;
         this.description = description;
     }
+    public Product(String name, String category, float price, String imagelink, String description) {
+        super();
+
+        this.name = name;
+        this.category = category;
+        this.price = price;
+        this.imagelink = imagelink;
+        this.description = description;
+    }
 
     public Product() {
 

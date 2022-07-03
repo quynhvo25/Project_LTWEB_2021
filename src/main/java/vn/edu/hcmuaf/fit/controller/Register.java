@@ -29,7 +29,7 @@ public class Register extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         request.setCharacterEncoding("utf-8");
-        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
 
         String username = request.getParameter("username");
         String fullName = request.getParameter("fullname");
@@ -38,22 +38,27 @@ public class Register extends HttpServlet {
         String address = request.getParameter("address");
         String phone = request.getParameter("phone");
 
-        UserAccount userAccount = new UserAccount();
-        userAccount.setUserName(username);
-        userAccount.setFullName(fullName);
-        userAccount.setPassword(pass);
-        userAccount.setRePassword(repass);
-        userAccount.setAddress(address);
-        userAccount.setNumberPhone(phone);
+        if(pass.equals(repass)){
+            UserAccount userAccount = new UserAccount();
+            userAccount.setUserName(username);
+            userAccount.setFullName(fullName);
+            userAccount.setPassword(pass);
+            userAccount.setRePassword(repass);
+            userAccount.setAddress(address);
+            userAccount.setNumberPhone(phone);
 
-        try {
-            Connection connection = DBConnect.getConnection();
-              userServices.registerUserAccount(connection, userAccount);
+            try {
+                Connection connection = DBConnect.getConnection();
+                userServices.registerUserAccount(connection, userAccount);
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            response.sendRedirect("views/user/login.jsp");
+        }else {
+            request.setAttribute("error", "error");
         }
 
-        response.sendRedirect("views/user/login.jsp");
     }
 }

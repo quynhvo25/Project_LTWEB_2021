@@ -54,8 +54,7 @@ public class LoginServlet extends HttpServlet {
                     if (isvalid) {
                         HttpSession session = req.getSession();
                         session.setAttribute("dangnhapthanhcong", username);
-                        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/index.jsp");
-                        dispatcher.forward(req, resp);
+                        resp.sendRedirect(req.getContextPath() + "/Home");
                     } else {
                         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/views/user/login.jsp");
                         dispatcher.forward(req, resp);

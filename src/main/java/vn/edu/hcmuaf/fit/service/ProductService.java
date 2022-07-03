@@ -25,8 +25,8 @@ public class ProductService {
 
     }
 
-    public void updateProduct( Connection connection, Product product) throws SQLException {
-        productDAO.updateProduct(connection,product);
+    public void updateProduct( Connection connection, Product product,String masp) throws SQLException {
+        productDAO.updateProduct(connection,product,masp);
     }
 
     public Product findProduct(Connection connection, String masp) throws SQLException {

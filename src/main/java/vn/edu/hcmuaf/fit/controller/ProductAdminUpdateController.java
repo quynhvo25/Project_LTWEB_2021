@@ -26,10 +26,12 @@ public class ProductAdminUpdateController extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
+
         String masp = (String) req.getParameter("masp");
-
         Product product = null;
-
         String errorString = null;
 
         try {
@@ -57,6 +59,9 @@ public class ProductAdminUpdateController extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
+
         String masp = (String) req.getParameter("masp");
         String name = (String) req.getParameter("name");
         String category = (String) req.getParameter("category");
@@ -68,15 +73,15 @@ public class ProductAdminUpdateController extends HttpServlet {
             price = Float.parseFloat(priceStr);
         } catch (Exception e) {
         }
-        Product product = new Product(masp,name,category,price,imagelink,description);
+        Product product = new Product(name,category,price,imagelink,description);
 
         String errorString = null;
 
         try {
             Connection connection = DBConnect.getConnection();
-            productService.updateProduct(connection,product);
+                productService.updateProduct(connection,product,masp);
         } catch (SQLException e) {
-            e.printStackTrace();
+           e.printStackTrace();
             errorString = e.getMessage();
         }
         req.setAttribute("errorString", errorString);

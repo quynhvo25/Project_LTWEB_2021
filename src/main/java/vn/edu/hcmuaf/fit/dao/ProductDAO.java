@@ -73,17 +73,19 @@ public class ProductDAO {
         pstm.executeUpdate();
     }
     /*chinh sua san pham*/
-    public void updateProduct(Connection connection, Product product) throws SQLException {
+    public void updateProduct(Connection connection, Product product, String masp) throws SQLException {
         String sql = "Update product set name =?, category=?, price=?, imagelink=?, description=? where masp=? ";
 
         PreparedStatement pstm = connection.prepareStatement(sql);
+
 
         pstm.setString(1, product.getName());
         pstm.setString(2, product.getCategory());
         pstm.setFloat(3, product.getPrice());
         pstm.setString(4, product.getImagelink());
         pstm.setString(5, product.getDescription());
-        pstm.executeUpdate();
+        pstm.setString(6, masp);
+             pstm.executeUpdate();
     }
 
     /*xoa san pham*/

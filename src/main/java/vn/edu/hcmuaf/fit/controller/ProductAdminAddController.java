@@ -27,6 +27,9 @@ public class ProductAdminAddController extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        req.setCharacterEncoding("utf-8");
+        resp.setCharacterEncoding("utf-8");
+
         String masp = (String) req.getParameter("masp");
         String name = (String) req.getParameter("name");
         String category = (String) req.getParameter("category");
