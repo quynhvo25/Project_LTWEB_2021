@@ -86,7 +86,9 @@
                         </div>
                         <div class="group-input">
                             <label for="pass">Mật khẩu *</label>
-                            <input type="password" name="pass" id="pass" required  onkeyup='check();'>
+                            <input type="password" name="pass" id="pass" required  onkeyup='
+
+                            check();'>
                         </div>
                         <div class="group-input">
                             <label for="re-pass">Nhập lại mật khẩu *</label>

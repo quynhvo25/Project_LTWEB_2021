@@ -186,7 +186,7 @@
                 <div class="breadcrumb-text product-more">
                     <a href="./home.html"><i class="fa fa-home"></i> Home</a>
                     <a href="./shop.html">Shop</a>
-                    <span>Chi tiáº¿t sáº£n pháº©m</span>
+                    <span>Chi tiết sản phẩm</span>
                 </div>
             </div>
         </div>
@@ -200,7 +200,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="filter-widget">
-                    <h4 class="fw-title">DANH Má»¤C</h4>
+                    <h4 class="fw-title">DANH Mục</h4>
                     <ul class="filter-catagories">
                         <li><a href="#">TOP</a></li>
                         <ul class="sub-catagories">
@@ -213,7 +213,7 @@
                         </ul>
                         <li><a href="#">BOTTOM</a></li>
                         <ul class="sub-catagories">
-                            <li>Quáº§n</li>
+                            <li>Quần</li>
                         </ul>
                         <li><a href="#">ACCESSORIES</a></li>
                     </ul>
@@ -314,13 +314,13 @@
                     <div class="tab-item">
                         <ul class="nav" role="tablist">
                             <li>
-                                <a class="active" data-toggle="tab" href="#tab-1" role="tab">MÃ´ táº£</a>
+                                <a class="active" data-toggle="tab" href="#tab-1" role="tab">Mô tả</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" href="#tab-2" role="tab">Chi tiáº¿t sáº£n pháº©m</a>
+                                <a data-toggle="tab" href="#tab-2" role="tab">Chi tiết sản phẩm</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" href="#tab-3" role="tab">Báº£ng ÄÃ¡nh giÃ¡</a>
+                                <a data-toggle="tab" href="#tab-3" role="tab">Bảng đánh giá</a>
                             </li>
                         </ul>
                     </div>
@@ -343,7 +343,7 @@
                                 <div class="specification-table">
                                     <table>
                                         <tr>
-                                            <td class="p-catagory">xáº¿p háº¡ng khÃ¡ch hÃ ng</td>
+                                            <td class="p-catagory">Xếp hạng khách hàng</td>
                                             <td>
                                                 <div class="pd-rating">
                                                     <i class="fa fa-star"></i>
@@ -356,15 +356,15 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="p-catagory">GiÃ¡</td>
+                                            <td class="p-catagory">Giá</td>
                                             <td>
                                                 <div class="p-price">${product.price}</div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="p-catagory">ThÃªm vÃ o giá» hÃ ng</td>
+                                            <td class="p-catagory">Thêm vào giỏ hàng/td>
                                             <td>
-                                                <div class="cart-add">+ thÃªm vÃ o giá»i hÃ ng</div>
+                                                <div class="cart-add">+ Thêm vào giỏ hàng</div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -386,7 +386,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="p-catagory">MÃ u</td>
+                                            <td class="p-catagory">Mã sản phẩm</td>
                                             <td><span class="cs-color"></span></td>
                                         </tr>
                                         <tr>
@@ -400,7 +400,7 @@
                             </div>
                             <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                 <div class="customer-review-option">
-                                    <h4>2 BÃ¬nh luáº­n</h4>
+                                    <h4>2 Bình luận</h4>
                                     <div class="comment-option">
                                         <div class="co-item">
                                             <div class="avatar-pic">
@@ -479,7 +479,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2>Sáº£n pháº©m liÃªn quan</h2>
+                    <h2>Sản phẩm liên quan</h2>
                 </div>
             </div>
         </div>
@@ -493,13 +493,13 @@
                         </div>
                         <ul>
                             <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                            <li class="quick-view"><a href="#">+ ThÃªm vÃ o giá» hÃ ng</a></li>
+                            <li class="quick-view"><a href="#">+ Thêm sản phẩm vào giỏ hàng</a></li>
                         </ul>
                     </div>
                     <div class="pi-text">
                         <div class="catagory-name">Top</div>
                         <a href="#">
-                            <h5>Cardigan hÃ¬nh bÃ´ng hoa</h5>
+                            <h5>Cardigan bông hoa</h5>
                         </a>
                         <div class="product-price">
                             200.000
@@ -518,7 +518,7 @@
                         </div>
                         <ul>
                             <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                            <li class="quick-view"><a href="#">+ ThÃªm vÃ o giá» hÃ ng</a></li>
+                            <li class="quick-view"><a href="#">+ Thêm vào giỏ hàng</a></li>
                         </ul>
                     </div>
                     <div class="pi-text">
@@ -542,13 +542,13 @@
                         </div>
                         <ul>
                             <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                            <li class="quick-view"><a href="#">+ ThÃªm vÃ o giá» hÃ ng</a></li>
+                            <li class="quick-view"><a href="#">+ Thêm vào giỏ hàng</a></li>
                         </ul>
                     </div>
                     <div class="pi-text">
                         <div class="catagory-name">Top</div>
                         <a href="#">
-                            <h5>Cardigan 2 tÃºi ngang</h5>
+                            <h5>Cardigan 2 túi ngang</h5>
                         </a>
                         <div class="product-price">
                             ${product.price}
