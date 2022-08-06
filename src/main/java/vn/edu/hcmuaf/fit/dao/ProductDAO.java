@@ -29,9 +29,10 @@ public class ProductDAO {
     }
     /*show danh sach san Pham*/
     public List<Product> queryProduct(Connection connection) throws SQLException {
+//        tao 1 cau sql
         String sql = "Select a.masp, a.name, a.category, a.price, a.imagelink, a.description from product a ";
 
-//        Connection conn = getConnection();
+// tao 1 preparestament de chay cau sql  o tren.
         PreparedStatement pstm = connection.prepareStatement(sql);
 
         ResultSet rs = pstm.executeQuery();
@@ -91,7 +92,6 @@ public class ProductDAO {
     /*xoa san pham*/
     public void deleteProduct(Connection connection,String masp) throws SQLException {
         String sql = "Delete From product where masp= ?";
-//        Connection conn = getConnection();
 
         PreparedStatement pstm = connection.prepareStatement(sql);
 

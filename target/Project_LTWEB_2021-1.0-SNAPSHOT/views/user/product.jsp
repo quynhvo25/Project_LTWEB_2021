@@ -358,7 +358,7 @@
                                         <tr>
                                             <td class="p-catagory">Giá</td>
                                             <td>
-                                                <div class="p-price">${product.price}</div>
+                                                <div class="p-price">${product.price} VND</div>
                                             </td>
                                         </tr>
                                         <tr>

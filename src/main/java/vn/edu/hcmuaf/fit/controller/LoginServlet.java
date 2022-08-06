@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import vn.edu.hcmuaf.fit.db.DBConnect;
-import vn.edu.hcmuaf.fit.service.LoginService;
-
-
+import vn.edu.hcmuaf.fit.service.UserServices;
 
 
 @WebServlet(name = "LoginServlet", urlPatterns = "/LoginServlet")
@@ -23,7 +21,7 @@ public class LoginServlet extends HttpServlet {
     /**
      *
      */
-    private LoginService loginService = new LoginService();
+    private UserServices userServices = new UserServices();
     private static final long serialVersionUID = 1L;
 
 
@@ -49,7 +47,7 @@ public class LoginServlet extends HttpServlet {
                 boolean isvalid = false;
 
                 try {
-                    isvalid = loginService.checkLogin(conn,username, pass);
+                    isvalid = userServices.checkLogin(conn,username, pass);
 
                     if (isvalid) {
                         HttpSession session = req.getSession();

@@ -33,9 +33,12 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
 
         String errorString = null;
+//        tao 1 list product
         List<Product> list = null;
         try {
+//            lay 1 connection
             Connection connection = DBConnect.getConnection();
+//            chay ham query product va truyen vao connection
             list = productService.queryProduct(connection);
         } catch (SQLException e) {
             e.printStackTrace();

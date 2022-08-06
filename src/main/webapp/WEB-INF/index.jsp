@@ -368,8 +368,8 @@
                                 <h5>${product.name}</h5>
                             </a>
                             <div class="product-price">
-                                ${product.price}
-                                <span>250.000</span>
+                                ${product.price} VND
+                                <span>250.000 vnd</span>
                             </div>
                         </div>
 

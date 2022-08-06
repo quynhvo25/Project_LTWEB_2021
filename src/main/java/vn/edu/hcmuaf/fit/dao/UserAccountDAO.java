@@ -10,19 +10,6 @@ import vn.edu.hcmuaf.fit.beans.UserAccount;
 
 public class UserAccountDAO {
 
-//    public Connection getConnection() {
-//        try {
-//            Class.forName("com.mysql.jdbc.Driver");
-//            String url = "jdbc:mysql://localhost:3306/ltwebbasic?useSSL=false";
-//            String user = "root";
-//            String password = "";
-//            return DriverManager.getConnection(url, user, password);
-//        } catch (ClassNotFoundException | SQLException e) {
-//            return null;
-//
-//        }
-//
-//    }
 
     public int registerUserAccount( Connection connection,UserAccount userAccount) throws ClassNotFoundException {
         String INSERT_USERS_SQL = "INSERT INTO useraccount"
@@ -30,8 +17,6 @@ public class UserAccountDAO {
                 + " (?, ?, ?, ?,?,?);";
 
         int result = 0;
-
-//        Connection connection = getConnection();
 
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
@@ -69,6 +54,39 @@ public class UserAccountDAO {
             return user;
         }
         return null;
+    }
+
+    public boolean checkLogin( Connection conn,String username, String pass) throws SQLException {
+
+        boolean isvalid = false;
+
+        String sql = "SELECT * FROM useraccount WHERE username = ? and password= ?";
+        PreparedStatement statement = null;
+        if (conn != null) {
+            try {
+
+                statement = conn.prepareStatement(sql);
+
+                statement.setString(1, username);
+                statement.setString(2, pass);
+
+                ResultSet status = statement.executeQuery();
+                if (status.next()) {
+                    isvalid = true;
+                } else {
+                    isvalid = false;
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                conn.close();
+                statement.close();
+            }
+
+        }
+        return isvalid;
+
     }
 
 
